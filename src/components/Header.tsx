@@ -14,9 +14,9 @@ const Header = () => {
     <header className="hero-section">
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         <span className="text-white font-semibold text-lg">abhishekmisra</span>
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className="nav-link">
+            <a key={link.label} href={link.href} className="nav-link text-xs tracking-wide">
               {link.label}
             </a>
           ))}

@@ -1,5 +1,3 @@
-import { User } from "lucide-react";
-
 const BriefIntro = () => {
   return (
     <section id="about" className="light-section py-16">
@@ -8,13 +6,17 @@ const BriefIntro = () => {
         
         <div className="flex flex-col md:flex-row items-center gap-8 max-w-5xl mx-auto">
           <div className="flex-shrink-0">
-            <div className="w-40 h-40 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center border-4 border-primary/30">
-              <User className="w-20 h-20 text-primary" />
+            <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-primary/20">
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" 
+                alt="Abhishek Misra"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           
           <div className="flex-1">
-            <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+            <p className="text-muted-foreground leading-relaxed text-sm">
               With over 15+ years of expertise spanning AI Product Management (APM), Technical Product & 
               Program Management (TPM), and Product Lifecycle Management (PLM), I excel in navigating complex 
               digital transformations for Fortune 500 companies. My focus areas include Generative AI, 
@@ -22,8 +24,8 @@ const BriefIntro = () => {
               initiatives for clients including leading technology & consulting firms like Deloitte, 
               CGI & Dell Technologies.
             </p>
-            <div className="mt-4">
-              <a href="#contact" className="btn-primary inline-block">
+            <div className="mt-6">
+              <a href="#contact" className="btn-primary inline-block text-sm">
                 Get in Touch
               </a>
             </div>

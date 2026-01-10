@@ -1,11 +1,11 @@
 const Fortune500Projects = () => {
   const companies = [
-    "JPMorgan",
-    "Microsoft",
-    "Lockheed Martin",
-    "Boeing",
-    "Verizon",
-    "GEICO",
+    { name: "JPMorgan", logo: "JPMORGAN" },
+    { name: "Microsoft", logo: "Microsoft" },
+    { name: "Lockheed Martin", logo: "LOCKHEED MARTIN" },
+    { name: "Boeing", logo: "BOEING" },
+    { name: "Verizon", logo: "verizon" },
+    { name: "GEICO", logo: "GEICO" },
   ];
 
   return (
@@ -13,11 +13,11 @@ const Fortune500Projects = () => {
       <div className="container mx-auto px-6">
         <h2 className="section-title text-foreground">Fortune 500 Projects</h2>
         
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center max-w-4xl mx-auto">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center max-w-5xl mx-auto">
           {companies.map((company, index) => (
             <div key={index} className="logo-card">
-              <div className="text-muted-foreground font-semibold text-sm md:text-base opacity-60 hover:opacity-100 transition-opacity">
-                {company}
+              <div className="text-muted-foreground font-bold text-xs md:text-sm opacity-50 hover:opacity-100 transition-opacity tracking-tight">
+                {company.logo}
               </div>
             </div>
           ))}

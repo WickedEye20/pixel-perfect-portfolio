@@ -1,60 +1,67 @@
-import { Building2 } from "lucide-react";
-
 const Experience = () => {
   const experiences = [
     {
       company: "Walmart",
       role: "Sr. Technical Product Manager - GenAI & Data Products",
-      period: "Present",
-      color: "bg-yellow-500",
+      period: "PRESENT",
+      logo: "🟡",
+      bgColor: "bg-yellow-400",
     },
     {
       company: "Waystar",
       role: "Sr. Product Manager - GTM & Data Products",
-      period: "Previous",
-      color: "bg-blue-600",
+      period: "PREVIOUS",
+      logo: "W",
+      bgColor: "bg-pink-500",
     },
     {
       company: "Deloitte",
       role: "Senior Consultant - AI/ML & Cloud",
-      period: "Previous",
-      color: "bg-black",
+      period: "PREVIOUS",
+      logo: "D",
+      bgColor: "bg-black",
     },
     {
       company: "CGI",
       role: "Technical Solution Manager - GTM/Cloud Platforms",
-      period: "Previous",
-      color: "bg-red-600",
+      period: "PREVIOUS",
+      logo: "CGI",
+      bgColor: "bg-red-600",
     },
     {
       company: "Anthem",
       role: "Senior Application Developer",
-      period: "Previous",
-      color: "bg-blue-700",
+      period: "PREVIOUS",
+      logo: "A",
+      bgColor: "bg-blue-700",
     },
     {
       company: "EPIQ Systems",
       role: "Member Systems Administration Program",
-      period: "Previous",
-      color: "bg-purple-600",
+      period: "PREVIOUS",
+      logo: "E",
+      bgColor: "bg-gray-700",
     },
     {
       company: "CGI",
       role: "Senior Consultant - SOA, Automation & Content Solution",
-      period: "Previous",
-      color: "bg-red-600",
+      period: "PREVIOUS",
+      logo: "CGI",
+      bgColor: "bg-red-600",
     },
     {
       company: "DELL Technologies",
       role: "Application Manager, Architect",
-      period: "Previous",
-      color: "bg-blue-500",
+      period: "PREVIOUS",
+      logo: "DELL",
+      bgColor: "bg-blue-600",
     },
     {
       company: "Cognizant",
       role: "Associate - Portfolio Management",
-      period: "Previous",
-      color: "bg-blue-800",
+      period: "PREVIOUS",
+      logo: "C",
+      bgColor: "bg-blue-800",
     },
   ];
 
@@ -63,17 +70,17 @@ const Experience = () => {
       <div className="container mx-auto px-6">
         <h2 className="section-title text-white">Experience</h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
           {experiences.map((exp, index) => (
             <div key={index} className="experience-card">
-              <div className="flex items-start gap-3">
-                <div className={`w-10 h-10 rounded-lg ${exp.color} flex items-center justify-center flex-shrink-0`}>
-                  <Building2 className="w-5 h-5 text-white" />
+              <div className="flex items-start gap-4">
+                <div className={`w-12 h-12 rounded-lg ${exp.bgColor} flex items-center justify-center flex-shrink-0 text-white font-bold text-xs`}>
+                  {exp.logo}
                 </div>
-                <div>
-                  <span className="text-primary text-xs font-medium">{exp.period}</span>
-                  <h3 className="text-white font-semibold text-sm mt-1">{exp.role}</h3>
-                  <p className="text-white/60 text-xs mt-1">{exp.company}</p>
+                <div className="flex-1 min-w-0">
+                  <span className="text-primary text-[10px] font-semibold tracking-wider">{exp.period}</span>
+                  <h3 className="text-white font-medium text-sm mt-1 leading-tight">{exp.role}</h3>
+                  <p className="text-white/50 text-xs mt-1">{exp.company}</p>
                 </div>
               </div>
             </div>

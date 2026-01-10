@@ -1,13 +1,11 @@
-import { Award, Shield, Cloud, Database, Server, Zap } from "lucide-react";
-
 const Certifications = () => {
   const certifications = [
-    { icon: Database, name: "DataBricks Certified Data Scientist", color: "bg-red-500" },
-    { icon: Cloud, name: "AWS® Certified Data Engineer", color: "bg-orange-500" },
-    { icon: Shield, name: "SAFe® 6 Agilist", color: "bg-green-600" },
-    { icon: Award, name: "SAFe® 6 Product Manager", color: "bg-yellow-500" },
-    { icon: Server, name: "SAFe® 6 Portfolio Specialist", color: "bg-blue-600" },
-    { icon: Zap, name: "Change Management Practitioner", color: "bg-purple-600" },
+    { name: "DataBricks Certified Data Scientist", icon: "🔴", bgColor: "bg-red-100" },
+    { name: "AWS® Certified Data Engineer", icon: "🟠", bgColor: "bg-orange-100" },
+    { name: "SAFe® 6 Agilist", icon: "🟢", bgColor: "bg-green-100" },
+    { name: "SAFe® 6 Product Manager", icon: "🟡", bgColor: "bg-yellow-100" },
+    { name: "SAFe® 6 Portfolio Specialist", icon: "🔵", bgColor: "bg-blue-100" },
+    { name: "Change Management Practitioner", icon: "🟣", bgColor: "bg-purple-100" },
   ];
 
   return (
@@ -18,10 +16,10 @@ const Certifications = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
             <div key={index} className="cert-badge">
-              <div className={`w-16 h-16 rounded-lg ${cert.color} flex items-center justify-center`}>
-                <cert.icon className="w-8 h-8 text-white" />
+              <div className={`w-16 h-16 rounded-lg ${cert.bgColor} flex items-center justify-center text-2xl`}>
+                {cert.icon}
               </div>
-              <p className="text-xs text-center text-muted-foreground font-medium mt-2">
+              <p className="text-xs text-center text-muted-foreground font-medium mt-2 leading-tight">
                 {cert.name}
               </p>
             </div>
