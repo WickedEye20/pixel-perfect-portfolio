@@ -1,27 +1,34 @@
+import datacamp from "../assets/certificate/datacamp.png";
+import rte from "../assets/certificate/rte.png";
+import ssm from "../assets/certificate/ssm.png";
+import popm from "../assets/certificate/popm.png";
+import spc from "../assets/certificate/spc.png";
+import prosci from "../assets/certificate/prosci.png";
+
 const Certifications = () => {
   const certifications = [
-    { name: "DataBricks Certified Data Scientist", icon: "🔴", bgColor: "bg-red-100" },
-    { name: "AWS® Certified Data Engineer", icon: "🟠", bgColor: "bg-orange-100" },
-    { name: "SAFe® 6 Agilist", icon: "🟢", bgColor: "bg-green-100" },
-    { name: "SAFe® 6 Product Manager", icon: "🟡", bgColor: "bg-yellow-100" },
-    { name: "SAFe® 6 Portfolio Specialist", icon: "🔵", bgColor: "bg-blue-100" },
-    { name: "Change Management Practitioner", icon: "🟣", bgColor: "bg-purple-100" },
+    { name: "Certified Data Scientist", icon: datacamp, bgColor: "bg-red-100" },
+    { name: "SAFe® 6 Release Train Engineer", icon: rte, bgColor: "bg-orange-100" },
+    { name: "SAFe® 6 ScrumMaster", icon: ssm, bgColor: "bg-green-100" },
+    { name: "SAFe® 6 Product Manager", icon: popm, bgColor: "bg-yellow-100" },
+    { name: "SAFe® 6 Practice Consultant", icon: spc, bgColor: "bg-blue-100" },
+    { name: "Change Management Practitioner", icon: prosci, bgColor: "bg-purple-100" },
   ];
 
   return (
-    <section id="certifications" className="light-section py-16">
-      <div className="container mx-auto px-6">
+    <section id="certifications" className="light-section py-28">
+      <div className="container">
         <h2 className="section-title text-foreground">Certifications</h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
           {certifications.map((cert, index) => (
             <div key={index} className="cert-badge">
-              <div className={`w-16 h-16 rounded-lg ${cert.bgColor} flex items-center justify-center text-2xl`}>
-                {cert.icon}
+              <div className={`rounded-lg flex items-center justify-center`}>
+                <img src={cert.icon} alt="" />
               </div>
-              <p className="text-xs text-center text-muted-foreground font-medium mt-2 leading-tight">
+              <h4 className="text-lg text-center text-black font-bold mt-2 leading-tight">
                 {cert.name}
-              </p>
+              </h4>
             </div>
           ))}
         </div>

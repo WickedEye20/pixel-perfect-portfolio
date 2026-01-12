@@ -1,42 +1,45 @@
+import iit from "../assets/education/iit.png";
+import du from "../assets/education/du.png";
+import gmu from "../assets/education/gmu.png";
 const Education = () => {
   const education = [
     {
-      degree: "MS (Pursuing) in Management Science",
-      school: "Columbia",
-      details: "Ivy League Education",
-      icon: "🎓",
+      degree: "BS (Honors) in Biomedical Science",
+      school: "Delhi University",
+      details: "New Delhi, India",
+      icon: du,
       bgColor: "bg-blue-600",
     },
     {
-      degree: "MTech in Information Technology (IT)",
-      school: "IIIT Allahabad",
-      details: "Top Engineering Institute of India",
-      icon: "🏛️",
+      degree: "MTech in Biomedical Engineering",
+      school: "Indian Institute of Technology Bombay",
+      details: "Mumbai, India",
+      icon: iit,
       bgColor: "bg-orange-500",
     },
     {
-      degree: "BS in Biomedical Engineering",
-      school: "Georgia Tech University",
-      details: "Top 5 in United States",
-      icon: "🔬",
+      degree: "MS in Data Analytics Engineering",
+      school: "George Mason University",
+      details: "Virginia, USA",
+      icon: gmu,
       bgColor: "bg-yellow-500",
     },
   ];
 
   return (
-    <section id="education" className="gray-section py-16">
-      <div className="container mx-auto px-6">
+    <section id="education" className="gray-section py-28">
+      <div className="container">
         <h2 className="section-title text-foreground">Education</h2>
         
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6">
           {education.map((edu, index) => (
-            <div key={index} className="skill-card text-center">
-              <div className={`w-16 h-16 rounded-full ${edu.bgColor} flex items-center justify-center mx-auto mb-4 text-2xl`}>
-                {edu.icon}
+            <div key={index} className="max-w-[350px]">
+              <div className={` rounded-full mb-8`}>
+                <img src={edu.icon} alt="" />
               </div>
-              <h3 className="font-semibold text-foreground text-sm mb-2">{edu.degree}</h3>
-              <p className="text-primary text-sm font-medium">{edu.school}</p>
-              <p className="text-muted-foreground text-xs mt-1">{edu.details}</p>
+              <h5 className="font-semibold text-foreground text-2xl mb-4">{edu.degree}</h5>
+              <p className="text-secondary text-sm font-medium">{edu.school}</p>
+              <p className="text-secondary text-xs mt-1">{edu.details}</p>
             </div>
           ))}
         </div>

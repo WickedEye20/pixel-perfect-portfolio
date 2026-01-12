@@ -1,59 +1,61 @@
-import { BarChart3, Brain, Cloud, Layers, Box, Cpu } from "lucide-react";
+import cloud_engineering_img from "../assets/skills/cloud_engg.svg";
+import data_science_img from "../assets/skills/data_science.svg";
+import bi_data_img from "../assets/skills/bi_data.svg";
+import process_management_img from "../assets/skills/project_management.svg";
+import team_efficiency from "../assets/skills/team_efficiency.svg";
+import tech_project_img from "../assets/skills/tech_project.svg";
 
 const TechSkills = () => {
   const skills = [
     {
-      icon: BarChart3,
+      icon: bi_data_img,
       title: "BI & Data Analytics",
-      description: "Power BI, Tableau, SSRS, SSAS Analytics, Crystal Reports, SAP Business Objects, Data visualization & reporting expertise",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex esa commodo consequat.",
     },
     {
-      icon: Brain,
+      icon: data_science_img,
       title: "Data Science & AI",
-      description: "Machine Learning, Deep Learning, NLP/NLU, LLMs, Generative AI, Python, TensorFlow, PyTorch, Azure ML, AWS SageMaker",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex esa commodo consequat.",
     },
     {
-      icon: Cloud,
+      icon: cloud_engineering_img,
       title: "Cloud Engineering",
-      description: "Azure, AWS, GCP, Kubernetes, Docker, Terraform, CI/CD pipelines, Infrastructure as Code, Cloud architecture",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex esa commodo consequat.",
     },
     {
-      icon: Layers,
+      icon: process_management_img,
       title: "Process & Program Management",
-      description: "Agile, Scrum, SAFe, Waterfall, JIRA, Azure DevOps, Program governance, Risk management, Resource planning",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex esa commodo consequat.",
     },
     {
-      icon: Box,
+      icon: tech_project_img,
       title: "Technical Product Management",
-      description: "Product roadmapping, User research, A/B testing, Product analytics, Feature prioritization, Go-to-market strategy",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex esa commodo consequat.",
     },
     {
-      icon: Cpu,
+      icon: team_efficiency,
       title: "ETLC, Pre-Sales & Enterprise Engineering",
-      description: "Solution architecture, RFP/RFI responses, Technical pre-sales, Client presentations, POC development",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex esa commodo consequat.",
     },
   ];
 
   return (
-    <section id="skills" className="gray-section py-16">
-      <div className="container mx-auto px-6">
+    <section id="skills" className="py-24">
+      <div className="container">
         <h2 className="section-title text-foreground">Tech Skills</h2>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, index) => (
             <div key={index} className="skill-card">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <skill.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground text-sm">{skill.title}</h3>
+              <div className="flex flex-col gap-3 mb-4">
+                <img src={skill.icon} className="w-20 h-20" />
+                <h5 className="font-semibold text-foreground">{skill.title}</h5>
               </div>
-              <p className="text-muted-foreground text-xs leading-relaxed mb-4">
+              <p className="text-muted-foreground text-base mb-5">
                 {skill.description}
               </p>
-              <button className="btn-primary text-xs py-1.5 px-4">
+              <a href="#" className="text-base font-medium text-primary py-2 px-6 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300">
                 Learn More
-              </button>
+              </a>
             </div>
           ))}
         </div>

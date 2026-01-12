@@ -10,13 +10,13 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="dark-section py-6">
-      <div className="container mx-auto px-6">
+    <footer className="primary_gradient py-14">
+      <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/50 text-xs">
-            Copyright © 2024 abhishekmisra.io. All Rights Reserved
+          <p className="text-white text-base">
+            Copyright © 2025, Abhishek Mishra | All Right Reserved
           </p>
-          
+
           <div className="flex items-center gap-3">
             {socialLinks.map((social, index) => (
               <a

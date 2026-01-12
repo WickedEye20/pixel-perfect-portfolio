@@ -1,86 +1,88 @@
+import waltcorp from "../assets/exp/waltcorp.png";
+import sams_club from "../assets/exp/sams_club.png";
+import lm from "../assets/exp/lm.png";
+import deloitte from "../assets/exp/deloitte.png";
+import cgi from "../assets/exp/cgi.png";
+import gmu from "../assets/exp/gmu.png";
+import certimap from "../assets/exp/certimap.png";
+import vts from "../assets/exp/vts.png";
+
 const Experience = () => {
   const experiences = [
     {
-      company: "Walmart",
-      role: "Sr. Technical Product Manager - GenAI & Data Products",
+      company: "SAM'S CLUB",
+      role: "Sr. Technical Product Adviser - CX, GTM & Sales Enablement",
       period: "PRESENT",
-      logo: "🟡",
+      logo: sams_club,
       bgColor: "bg-yellow-400",
     },
     {
-      company: "Waystar",
-      role: "Sr. Product Manager - GTM & Data Products",
+      company: "Waltcorp",
+      role: "Sr. AI Product Manager - GTM & Sales Enablement",
       period: "PREVIOUS",
-      logo: "W",
+      logo: waltcorp,
       bgColor: "bg-pink-500",
     },
     {
       company: "Deloitte",
-      role: "Senior Consultant - AI/ML & Cloud",
+      role: "Global Engagement & Product Training Lead",
       period: "PREVIOUS",
-      logo: "D",
+      logo: deloitte,
       bgColor: "bg-black",
     },
     {
-      company: "CGI",
-      role: "Technical Solution Manager - GTM/Cloud Platforms",
+      company: "Certimap",
+      role: "Technical Product Manager - GTM & Sales Enablement",
       period: "PREVIOUS",
-      logo: "CGI",
+      logo: certimap,
       bgColor: "bg-red-600",
     },
     {
-      company: "Anthem",
-      role: "Senior Application Developer",
+      company: "CGI",
+      role: "Senior Consultant - OCM, Curriculum & Product Adoption",
       period: "PREVIOUS",
-      logo: "A",
+      logo: cgi,
       bgColor: "bg-blue-700",
     },
     {
-      company: "EPIQ Systems",
-      role: "Member Systems Administration Program",
+      company: "Lockheed Martin",
+      role: "Machine Learning Engineer",
       period: "PREVIOUS",
-      logo: "E",
+      logo: lm,
       bgColor: "bg-gray-700",
     },
     {
-      company: "CGI",
-      role: "Senior Consultant - SOA, Automation & Content Solution",
+      company: "George Mason University",
+      role: "Web Developer & Trainer",
       period: "PREVIOUS",
-      logo: "CGI",
+      logo: gmu,
       bgColor: "bg-red-600",
     },
     {
-      company: "DELL Technologies",
-      role: "Application Manager, Architect",
+      company: "Vidyatech Solutions",
+      role: "Technical Curriculum Developer",
       period: "PREVIOUS",
-      logo: "DELL",
+      logo: vts,
       bgColor: "bg-blue-600",
-    },
-    {
-      company: "Cognizant",
-      role: "Associate - Portfolio Management",
-      period: "PREVIOUS",
-      logo: "C",
-      bgColor: "bg-blue-800",
     },
   ];
 
   return (
-    <section id="experience" className="dark-section py-16">
-      <div className="container mx-auto px-6">
-        <h2 className="section-title text-white">Experience</h2>
+    <section id="experience" className="gray-section py-24">
+      <div className="container">
+        <h2 className="section-title">Experience</h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-4 lg:grid-cols-4 gap-[30px]">
           {experiences.map((exp, index) => (
             <div key={index} className="experience-card">
-              <div className="flex items-start gap-4">
-                <div className={`w-12 h-12 rounded-lg ${exp.bgColor} flex items-center justify-center flex-shrink-0 text-white font-bold text-xs`}>
-                  {exp.logo}
+              <div className="flex flex-col items-center gap-4 h-full">
+                <div className={`min-h-[160px] flex items-center justify-center flex-shrink-0 text-white font-bold text-xs`}>
+                  <img src={exp.logo} alt="" />
                 </div>
-                <div className="flex-1 min-w-0">
-                  <span className="text-primary text-[10px] font-semibold tracking-wider">{exp.period}</span>
-                  <h3 className="text-white font-medium text-sm mt-1 leading-tight">{exp.role}</h3>
-                  <p className="text-white/50 text-xs mt-1">{exp.company}</p>
+                <div className="flex-1 min-w-0 text-center flex flex-col gap-4 items-center bg-[#fafafa] p-8 w-full">
+                  <p className="text-primary text-base mt-1 font-bold">{exp.company}</p>
+                  <h5 className="text-black mt-1 font-bold">{exp.role}</h5>
+                  <a href="#" className="text-base font-medium text-primary py-2 px-6 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 inline-block mt-auto">Read More</a>
                 </div>
               </div>
             </div>

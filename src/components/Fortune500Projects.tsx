@@ -1,23 +1,30 @@
+import ms from "../assets/projects/ms.png";
+import jpm from "../assets/projects/jpm.png";
+import lm from "../assets/projects/lm.png";
+import ce from "../assets/projects/ce.png";
+import broadcom from "../assets/projects/broadcom.png";
+import wm from "../assets/projects/wm.png";
+
 const Fortune500Projects = () => {
   const companies = [
-    { name: "JPMorgan", logo: "JPMORGAN" },
-    { name: "Microsoft", logo: "Microsoft" },
-    { name: "Lockheed Martin", logo: "LOCKHEED MARTIN" },
-    { name: "Boeing", logo: "BOEING" },
-    { name: "Verizon", logo: "verizon" },
-    { name: "GEICO", logo: "GEICO" },
+    { name: "JPMorgan", logo: jpm },
+    { name: "Microsoft", logo: ms },
+    { name: "Lockheed Martin", logo: lm },
+    { name: "ConEdison", logo: ce },
+    { name: "Broadcom", logo: broadcom },
+    { name: "Walmart", logo: wm },
   ];
 
   return (
-    <section id="projects" className="light-section py-16">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="light-section py-28">
+      <div className="container">
         <h2 className="section-title text-foreground">Fortune 500 Projects</h2>
         
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center max-w-5xl mx-auto">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center">
           {companies.map((company, index) => (
             <div key={index} className="logo-card">
-              <div className="text-muted-foreground font-bold text-xs md:text-sm opacity-50 hover:opacity-100 transition-opacity tracking-tight">
-                {company.logo}
+              <div className="text-muted-foreground font-bold text-xs md:text-sm transition-opacity tracking-tight">
+                <img src={company.logo} alt="" />
               </div>
             </div>
           ))}
