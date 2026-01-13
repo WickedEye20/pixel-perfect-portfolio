@@ -82,7 +82,7 @@ const Experience = () => {
                 <div className="flex-1 min-w-0 text-center flex flex-col gap-4 items-center bg-[#fafafa] p-8 w-full">
                   <p className="text-primary text-base mt-1 font-bold">{exp.company}</p>
                   <h5 className="text-black mt-1 font-bold">{exp.role}</h5>
-                  <a href="#" className="text-base font-medium text-primary py-2 px-6 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 inline-block mt-auto">Read More</a>
+                  <a href="/work-experience" className="text-base font-medium text-primary py-2 px-6 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 inline-block mt-auto">Read More</a>
                 </div>
               </div>
             </div>
