@@ -139,7 +139,13 @@ const WorkExperience = () => {
                 {positions.map((position) => (
                   <li key={position.id}>
                     <button
-                      onClick={() => setActivePosition(position.id)}
+                      onClick={() => {
+                        setActivePosition(position.id);
+                        const element = document.getElementById(position.id);
+                        if (element) {
+                          element.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }
+                      }}
                       className={`text-left w-full transition-colors ${
                         activePosition === position.id
                           ? "text-primary font-bold"
@@ -159,7 +165,7 @@ const WorkExperience = () => {
               
               <div className="space-y-12">
                 {positions.map((job) => (
-                  <div key={job.id} className="border-b border-border pb-12 last:border-0">
+                  <div id={job.id} key={job.id} className="border-b border-border pb-12 last:border-0 scroll-mt-32">
                     {/* Company Logo and Title */}
                     <div className="flex items-center gap-3 mb-4">
                       <img src={job.logo} alt={job.company} className="h-8 object-contain" />
