@@ -133,7 +133,7 @@ const WorkExperience = () => {
         <div className="container">
           <div className="grid lg:grid-cols-[300px_1fr] gap-12">
             {/* Left Sidebar - Positions */}
-            <div>
+            <div className="lg:sticky lg:top-24 lg:self-start">
               <h3 className="text-primary text-xl font-bold mb-6">Positions</h3>
               <ul className="space-y-3">
                 {positions.map((position) => (
