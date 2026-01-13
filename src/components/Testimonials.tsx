@@ -1,36 +1,25 @@
-import { Quote } from "lucide-react";
-
+import { Linkedin } from "lucide-react";
+import testimony_img from "../assets/testimonial_img.png";
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="dark-section py-16">
-      <div className="container mx-auto px-6">
-        <h2 className="section-title text-white">Testimonials</h2>
-        
-        <div className="max-w-4xl mx-auto">
-          <div className="relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-            <Quote className="absolute top-6 left-6 w-6 h-6 text-primary/60" />
-            
-            <blockquote className="text-white/80 text-sm leading-relaxed mb-6 pl-10 pr-4">
-              "I have knowledge about all your competencies including the things not listed here. 
-              This is a testimonial demonstrating all the testimonial layout I have for you. The 
-              testimonial is two lines big and you will see similar structure when implementing 
-              another section."
-            </blockquote>
-            
-            <div className="flex items-center gap-4 pl-10">
-              <div className="w-10 h-10 rounded-full overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
-                  alt="Albert Consultant"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <p className="text-white font-medium text-sm">Albert Consultant</p>
-                <p className="text-white/50 text-xs">Role</p>
-              </div>
-            </div>
-          </div>
+    <section id="about" className="gray-section">
+      <div className="flex flex-col md:flex-row items-center">
+        <div className="flex-1 container">
+          <h2 className="section-title text-foreground mb-8">Testimonials</h2>
+          <p className="text-black text-2xl italic">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae sit cursus pellentesque egestas id. Nullam id et ut tincidunt sit amet. Et libero quis proin tincidunt netus magna ut. Urna, imperdiet scelerisque magna at orci."
+          </p>
+        </div>
+        <div className="flex-shrink-0 p-40 primary_gradient">
+          <img
+            width={90}
+            height={90}
+            src={testimony_img}
+            alt="Abhishek Misra"
+            className="w-full h-full object-cover rounded-full"
+          />
+          <h6 className="text-lg text-white text-center mt-5">Alice Campbell</h6>
+          <p className="text-white text-center">Model</p>
         </div>
       </div>
     </section>

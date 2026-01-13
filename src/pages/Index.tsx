@@ -21,7 +21,7 @@ const Index = () => {
       <Fortune500Projects />
       <Education />
       <Certifications />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <Contact />
       <Footer />
     </div>
