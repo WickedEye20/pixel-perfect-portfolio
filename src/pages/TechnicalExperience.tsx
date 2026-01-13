@@ -186,7 +186,7 @@ const TechnicalExperience = () => {
             {/* Left Sidebar - Domains */}
             <div className="lg:sticky lg:top-24 lg:self-start">
               <h3 className="text-primary text-xl font-bold mb-6">Domains</h3>
-              <ul className="space-y-3">
+              <ul className="space-y-6">
                 {domains.map((domain) => (
                   <li key={domain.id}>
                     <button
@@ -197,7 +197,7 @@ const TechnicalExperience = () => {
                           element.scrollIntoView({ behavior: "smooth", block: "start" });
                         }
                       }}
-                      className={`text-left w-full transition-colors text-sm ${
+                      className={`text-left w-full transition-colors ${
                         activeDomain === domain.id
                           ? "text-primary font-bold"
                           : "text-muted-foreground hover:text-foreground"
@@ -216,7 +216,7 @@ const TechnicalExperience = () => {
                 <div 
                   id={domain.id} 
                   key={domain.id} 
-                  className="border-b border-border pb-12 last:border-0 scroll-mt-32"
+                  className="shadow-[0_4px_12px_0_rgba(0,0,0,0.078)] p-6 scroll-mt-32 rounded-xl"
                 >
                   {/* Domain Title with Icon */}
                   <div className="flex items-center gap-3 mb-6">
@@ -228,7 +228,7 @@ const TechnicalExperience = () => {
                   <Accordion type="multiple" className="w-full">
                     {domain.skills.map((skill, idx) => (
                       <AccordionItem key={idx} value={`${domain.id}-${idx}`} className="border-b border-border">
-                        <AccordionTrigger className="text-left text-sm font-medium text-foreground hover:no-underline py-4">
+                        <AccordionTrigger className="text-left text-base font-bold text-black hover:no-underline py-6">
                           {skill.name}
                         </AccordionTrigger>
                         <AccordionContent className="text-sm text-muted-foreground pb-4">
