@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -115,6 +115,33 @@ const WorkExperience = () => {
 
     const [activePosition, setActivePosition] = useState(positions[0].id);
     const activeJob = positions.find(p => p.id === activePosition) || positions[0];
+
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: "-20% 0px -60% 0px",
+            threshold: 0
+        };
+
+        const observerCallback = (entries: IntersectionObserverEntry[]) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActivePosition(entry.target.id);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        positions.forEach((position) => {
+            const element = document.getElementById(position.id);
+            if (element) {
+                observer.observe(element);
+            }
+        });
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <div className="min-h-screen bg-background">
