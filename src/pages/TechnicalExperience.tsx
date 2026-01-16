@@ -200,18 +200,18 @@ const TechnicalExperience = () => {
       <Header />
       
       {/* Page Title Section */}
-      <section className="primary_gradient pt-24 pb-12">
+      <section className="bg-[#f4f4f4] pt-32 pb-12">
         <div className="container">
-          <h1 className="text-white text-3xl md:text-4xl font-bold">Technical Experience</h1>
+          <h1 className="text-black text-3xl md:text-4xl font-bold">Technical Experience</h1>
         </div>
       </section>
 
       {/* Main Content */}
       <section className="py-16">
         <div className="container">
-          <div className="grid lg:grid-cols-[280px_1fr] gap-12">
+          <div className="grid md:grid-cols-[200px_1fr] lg:grid-cols-[300px_1fr] gap-12">
             {/* Left Sidebar - Domains */}
-            <div className="lg:sticky lg:top-24 lg:self-start">
+            <div className="md:sticky md:top-28 md:self-start hidden md:block">
               <h3 className="text-primary text-xl font-bold mb-6">Domains</h3>
               <ul className="space-y-6">
                 {domains.map((domain) => (
@@ -224,7 +224,7 @@ const TechnicalExperience = () => {
                           element.scrollIntoView({ behavior: "smooth", block: "start" });
                         }
                       }}
-                      className={`text-left w-full transition-colors ${
+                      className={`text-sm lg:text-base text-left w-full transition-colors ${
                         activeDomain === domain.id
                           ? "text-primary font-bold"
                           : "text-muted-foreground hover:text-foreground"
@@ -252,7 +252,7 @@ const TechnicalExperience = () => {
                   </div>
                   
                   {/* Skills Accordion */}
-                  <Accordion type="multiple" className="w-full">
+                  <Accordion type="single" collapsible className="w-full">
                     {domain.skills.map((skill, idx) => (
                       <AccordionItem key={idx} value={`${domain.id}-${idx}`} className="border-b border-border">
                         <AccordionTrigger className="text-left text-base font-bold text-black hover:no-underline py-6">

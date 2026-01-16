@@ -1,16 +1,19 @@
 import { Twitter, Linkedin, Facebook, Instagram, Youtube } from "lucide-react";
+import twitter from "../assets/footer/twitter.png";
+import github from "../assets/footer/github.png";
+import linkedin from "../assets/footer/linkedIn.png";
+import tableu from "../assets/footer/tableu.png";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Youtube, href: "#", label: "YouTube" },
+    { icon: twitter, href: "#", label: "Twitter" },
+    { icon: linkedin, href: "#", label: "LinkedIn" },
+    { icon: github, href: "#", label: "GitHub" },
+    { icon: tableu, href: "#", label: "Tableu" },
   ];
 
   return (
-    <footer className="primary_gradient py-14">
+    <footer className="secondary_gradient py-14">
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white text-base">
@@ -23,9 +26,9 @@ const Footer = () => {
                 key={index}
                 href={social.href}
                 aria-label={social.label}
-                className="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary/80 transition-colors"
+                className="flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
               >
-                <social.icon className="w-4 h-4 text-white" />
+                <img src={social.icon} />
               </a>
             ))}
           </div>

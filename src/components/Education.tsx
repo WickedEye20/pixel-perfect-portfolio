@@ -31,7 +31,7 @@ const Education = () => {
       <div className="container">
         <h2 className="section-title text-foreground">Education</h2>
         
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-10 md:gap-6">
           {education.map((edu, index) => (
             <div key={index} className="max-w-[350px]">
               <div className={` rounded-full mb-8`}>

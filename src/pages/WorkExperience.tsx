@@ -148,18 +148,18 @@ const WorkExperience = () => {
             <Header />
 
             {/* Page Title Section */}
-            <section className="primary_gradient pt-24 pb-12">
+            <section className="bg-[#f4f4f4] pt-32 pb-12">
                 <div className="container">
-                    <h1 className="text-white text-3xl md:text-4xl font-bold">Work Experience</h1>
+                    <h1 className="text-black text-3xl md:text-4xl font-bold">Work Experience</h1>
                 </div>
             </section>
 
             {/* Main Content */}
             <section className="py-16">
                 <div className="container">
-                    <div className="grid lg:grid-cols-[300px_1fr] gap-12">
+                    <div className="grid md:grid-cols-[200px_1fr] lg:grid-cols-[300px_1fr] gap-12">
                         {/* Left Sidebar - Positions */}
-                        <div className="lg:sticky lg:top-24 lg:self-start">
+                        <div className="md:sticky md:top-28 md:self-start hidden md:block">
                             <h3 className="text-primary text-xl font-bold mb-6">Positions</h3>
                             <ul className="space-y-6">
                                 {positions.map((position) => (
@@ -172,7 +172,7 @@ const WorkExperience = () => {
                                                     element.scrollIntoView({ behavior: "smooth", block: "start" });
                                                 }
                                             }}
-                                            className={`text-left w-full transition-colors ${activePosition === position.id
+                                            className={`text-sm lg:text-base text-left w-full transition-colors ${activePosition === position.id
                                                     ? "text-primary font-bold"
                                                     : "text-muted-foreground hover:text-foreground"
                                                 }`}

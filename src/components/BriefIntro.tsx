@@ -4,17 +4,15 @@ const BriefIntro = () => {
   return (
     <section id="about" className="gray-section">
       <div className="flex flex-col md:flex-row items-center">
-        <div className="flex-shrink-0 p-28 primary_gradient">
+        <div className="flex-shrink-0 p-16 lg:p-28 primary_gradient w-full md:w-auto">
           <img
-            width={250}
-            height={250}
             src={abhi_img}
             alt="Abhishek Misra"
-            className="w-full h-full object-cover rounded-full"
+            className="m-auto w-48 h-48 lg:w-[250px] lg:h-[250px] object-cover rounded-full"
           />
         </div>
 
-        <div className="flex-1 px-24">
+        <div className="flex-1 px-[4vw] py-6 md:py-0 md:px-16 lg:px-24">
           <h2 className="section-title text-foreground mb-5">Brief Intro</h2>
           <p className="text-secondary text-base max-w-[680px] font-medium">
             Enterprise Solution Delivery (ESD) & Technical Program Management (TPM): Diligently led & managed cross-functional teams for over 5+ years to deliver tailored cloud (AWS, GCP, Azure) based solutions on time and under budget, ensuring alignment with client needs, business goals and the larger Enterprise Architecture (EA). Architected and developed end-to-end ML pipelines leveraging

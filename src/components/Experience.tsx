@@ -72,11 +72,11 @@ const Experience = () => {
       <div className="container">
         <h2 className="section-title">Experience</h2>
         
-        <div className="grid md:grid-cols-4 lg:grid-cols-4 gap-[30px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
           {experiences.map((exp, index) => (
             <div key={index} className="experience-card">
               <div className="flex flex-col items-center gap-4 h-full">
-                <div className={`min-h-[160px] flex items-center justify-center flex-shrink-0 text-white font-bold text-xs`}>
+                <div className={`min-h-[130px] md:min-h-[160px] flex items-center justify-center flex-shrink-0 text-white font-bold text-xs`}>
                   <img src={exp.logo} alt="" />
                 </div>
                 <div className="flex-1 min-w-0 text-center flex flex-col gap-4 items-center bg-[#fafafa] p-8 w-full">

@@ -7,7 +7,10 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "10vw",
+      padding: {
+        DEFAULT: "4vw",   // mobile
+        md: "10vw",        // ≥768px
+      },                      
       screens: {
         "2xl": "100%",
       },

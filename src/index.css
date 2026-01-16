@@ -53,6 +53,8 @@
       hsl(0 0% 100%) 0%,
       hsl(210 20% 98%) 100%
     );
+    --gradient-accent: linear-gradient(178.07deg, #2185D5 8.37%, #000000 87.4%);
+;
   }
 
   .dark {
@@ -119,6 +121,10 @@
     background: hsl(var(--section-gray));
   }
 
+  .secondary_gradient {
+    background: var(--gradient-accent);
+  }
+
   .skill-card {
     @apply p-6 shadow-[0_4px_12px_0_rgba(0,0,0,0.078)] transition-shadow duration-300;
   }
@@ -132,7 +138,7 @@
   }
 
   .cert-badge {
-    @apply flex flex-col items-center gap-2 p-10;
+    @apply flex flex-col items-center gap-2 p-5 md:p-10;
   }
 
   .section-title {
@@ -152,7 +158,7 @@
   }
 
   .nav-link {
-    @apply text-white/80 hover:text-white text-sm font-medium transition-colors;
+    @apply text-white hover:text-white/80 text-sm font-medium transition-colors;
   }
 
   .competency-item {
