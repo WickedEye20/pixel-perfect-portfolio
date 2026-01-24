@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Fortune500Projects from "@/components/Fortune500Projects";
-import waltcorp from "@/assets/exp/waltcorp.png";
-import deloitte from "@/assets/exp/deloitte.png";
-import certimap from "@/assets/exp/certimap.png";
-import cgi from "@/assets/exp/cgi.png";
-import lm from "@/assets/exp/lm.png";
-import gmu from "@/assets/exp/gmu.png";
-import vts from "@/assets/exp/vts.png";
+import waltcorp from "@/assets/work_exp/waltcorp.png";
+import deloitte from "@/assets/work_exp/deloitte.png";
+import certimap from "@/assets/work_exp/certimap.png";
+import cgi from "@/assets/work_exp/cgi.png";
+import lm from "@/assets/work_exp/lm.png";
+import gmu from "@/assets/work_exp/gmu.png";
+import vts from "@/assets/work_exp/vts.png";
 
 const WorkExperience = () => {
     const positions = [
@@ -193,7 +193,7 @@ const WorkExperience = () => {
                                     <div id={job.id} key={job.id} className="shadow-[0_4px_12px_0_rgba(0,0,0,0.078)] p-6 scroll-mt-32 rounded-xl">
                                         {/* Company Logo and Title */}
                                         <div className="flex items-center gap-3 mb-4">
-                                            <img src={job.logo} alt={job.company} className="h-8 object-contain" />
+                                            <img src={job.logo} alt={job.company} className="object-contain" />
                                             <h3 className="text-xl font-semibold text-primary">{job.company}</h3>
                                         </div>
 

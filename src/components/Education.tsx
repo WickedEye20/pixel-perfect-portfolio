@@ -27,7 +27,7 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="gray-section py-28">
+    <section id="education" className="gray-section py-28 scroll-mt-32">
       <div className="container">
         <h2 className="section-title text-foreground">Education</h2>
         

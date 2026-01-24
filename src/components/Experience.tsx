@@ -68,7 +68,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="gray-section py-24">
+    <section id="experience" className="gray-section py-24 scroll-mt-32">
       <div className="container">
         <h2 className="section-title">Experience</h2>
         

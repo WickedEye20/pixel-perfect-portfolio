@@ -6,11 +6,7 @@ export default {
   prefix: "",
   theme: {
     container: {
-      center: true,
-      padding: {
-        DEFAULT: "4vw",   // mobile
-        md: "10vw",        // ≥768px
-      },                      
+      center: true,                    
       screens: {
         "2xl": "100%",
       },

@@ -6,10 +6,10 @@ import tableu from "../assets/footer/tableu.png";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: twitter, href: "#", label: "Twitter" },
-    { icon: linkedin, href: "#", label: "LinkedIn" },
-    { icon: github, href: "#", label: "GitHub" },
-    { icon: tableu, href: "#", label: "Tableu" },
+    { icon: twitter, href: "https://twitter.com/abhi_nyc_mishra", label: "Twitter" },
+    { icon: linkedin, href: "https://www.linkedin.com/in/abhishekmishra11/", label: "LinkedIn" },
+    { icon: github, href: "https://github.com/abhishekmishra11", label: "GitHub" },
+    { icon: tableu, href: "https://public.tableau.com/profile/abhi.misra#!/", label: "Tableu" },
   ];
 
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white text-base">
-            Copyright © 2025, Abhishek Mishra | All Right Reserved
+            Copyright © 2025, Abhishek Misra | All Right Reserved
           </p>
 
           <div className="flex items-center gap-3">
@@ -27,6 +27,7 @@ const Footer = () => {
                 href={social.href}
                 aria-label={social.label}
                 className="flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
+                target="_blank"
               >
                 <img src={social.icon} />
               </a>

@@ -39,7 +39,7 @@
     --navy-light: 216 40% 15%;
     --blue-accent: 207 73% 48%;
     --blue-glow: 207 100% 60%;
-    --section-light: 210 20% 98%;
+    --section-light: 0 0% 100%;
     --section-gray: 0 0% 96%;
 
     /* Gradients */
@@ -106,6 +106,9 @@
 }
 
 @layer components {
+  .container {
+    @apply px-[4vw] md:px-[10vw];
+  }
   .primary_gradient {
     background: var(--gradient-hero);
   }

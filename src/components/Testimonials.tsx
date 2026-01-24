@@ -2,7 +2,7 @@ import { Linkedin } from "lucide-react";
 import testimony_img from "../assets/testimonial_img.png";
 const Testimonials = () => {
   return (
-    <section id="about" className="gray-section py-10">
+    <section id="testimonials" className="gray-section py-10 md:py-0 scroll-mt-32">
       <div className="flex flex-col-reverse md:flex-row items-center">
         <div className="flex-1 container pt-10">
           <h2 className="section-title text-foreground mb-8">Testimonials</h2>

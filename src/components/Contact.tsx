@@ -21,7 +21,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="light-section py-32">
+    <section id="contact" className="light-section py-32 scroll-mt-32">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">Get in Touch</h2>
         <div className="max-w-xl p-6 rounded-xl bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.078)]">

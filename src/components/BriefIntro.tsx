@@ -2,7 +2,7 @@ import { Linkedin } from "lucide-react";
 import abhi_img from "../assets/abhi_m_image.png";
 const BriefIntro = () => {
   return (
-    <section id="about" className="gray-section">
+    <section id="about" className="gray-section scroll-mt-32">
       <div className="flex flex-col md:flex-row items-center">
         <div className="flex-shrink-0 p-16 lg:p-28 primary_gradient w-full md:w-auto">
           <img
@@ -18,7 +18,7 @@ const BriefIntro = () => {
             Enterprise Solution Delivery (ESD) & Technical Program Management (TPM): Diligently led & managed cross-functional teams for over 5+ years to deliver tailored cloud (AWS, GCP, Azure) based solutions on time and under budget, ensuring alignment with client needs, business goals and the larger Enterprise Architecture (EA). Architected and developed end-to-end ML pipelines leveraging
           </p>
           <div className="mt-4">
-            <a href="#contact" className="inline-block">
+            <a href="https://www.linkedin.com/in/abhishekmishra11/" target="_blank" className="inline-block">
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 25" fill="none">
                 <g clip-path="url(#clip0_181_198)">
                   <path d="M28.2874 19.9989H27.9906V19.4111H28.3663C28.5618 19.4111 28.7827 19.4423 28.7827 19.6911C28.7827 19.9759 28.5598 19.9989 28.2874 19.9989ZM28.5826 20.1739C28.8825 20.1381 29.04 19.9759 29.04 19.7045C29.04 19.3737 28.8342 19.2129 28.4127 19.2129H27.7363V20.9539H27.9906V20.1957H28.3053L28.3114 20.205L28.8009 20.9539H29.0726L28.5485 20.1787L28.5826 20.1739Z" fill="#231F20" />

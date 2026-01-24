@@ -9,8 +9,28 @@ import Certifications from "@/components/Certifications";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const el = document.getElementById(location.state.scrollTo);
+
+      setTimeout(() => {
+        el?.scrollIntoView({ behavior: "smooth" });
+
+        // 🔥 CLEAR STATE after scroll
+        navigate(location.pathname, { replace: true, state: {} });
+      }, 100);
+    } else {
+      // ✅ If normal visit to homepage → go to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, []);
   return (
     <div className="min-h-screen">
       <Header />

@@ -16,7 +16,7 @@ const Fortune500Projects = () => {
   ];
 
   return (
-    <section id="projects" className="light-section py-28">
+    <section id="projects" className="light-section py-28 scroll-mt-32">
       <div className="container">
         <h2 className="section-title text-foreground">Fortune 500 Projects</h2>
         
