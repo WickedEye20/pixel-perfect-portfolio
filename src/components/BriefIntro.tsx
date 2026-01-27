@@ -12,9 +12,9 @@ const BriefIntro = () => {
           />
         </div>
 
-        <div className="flex-1 px-[4vw] py-6 md:py-0 md:px-16 lg:px-24">
+        <div className="flex-1 px-[4vw] py-6 md:py-0 md:px-16 lg:px-24 text-center">
           <h2 className="section-title text-foreground mb-5">Brief Intro</h2>
-          <p className="text-secondary text-base max-w-[680px] font-medium">
+          <p className="text-secondary text-base font-medium">
             Enterprise Solution Delivery (ESD) & Technical Program Management (TPM): Diligently led & managed cross-functional teams for over 5+ years to deliver tailored cloud (AWS, GCP, Azure) based solutions on time and under budget, ensuring alignment with client needs, business goals and the larger Enterprise Architecture (EA). Architected and developed end-to-end ML pipelines leveraging
           </p>
           <div className="mt-4">

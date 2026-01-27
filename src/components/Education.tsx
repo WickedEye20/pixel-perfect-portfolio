@@ -4,21 +4,21 @@ import gmu from "../assets/education/gmu.png";
 const Education = () => {
   const education = [
     {
-      degree: "BS (Honors) in Biomedical Science",
+      degree: (<>BS (Honors) <span className="block font-normal text-muted-foreground">in</span> Biomedical Science</>),
       school: "Delhi University",
       details: "New Delhi, India",
       icon: du,
       bgColor: "bg-blue-600",
     },
     {
-      degree: "MTech in Biomedical Engineering",
+      degree: (<>MTech <span className="block font-normal text-muted-foreground">in</span> Biomedical Engineering</>),
       school: "Indian Institute of Technology Bombay",
       details: "Mumbai, India",
       icon: iit,
       bgColor: "bg-orange-500",
     },
     {
-      degree: "MS in Data Analytics Engineering",
+      degree: (<>MS <span className="block font-normal text-muted-foreground">in</span> Data Analytics Engineering</>),
       school: "George Mason University",
       details: "Virginia, USA",
       icon: gmu,
@@ -28,14 +28,14 @@ const Education = () => {
 
   return (
     <section id="education" className="gray-section py-28 scroll-mt-32">
-      <div className="container">
+      <div className="container text-center">
         <h2 className="section-title text-foreground">Education</h2>
         
-        <div className="grid md:grid-cols-3 gap-10 md:gap-6">
+        <div className="grid md:grid-cols-3 gap-10 md:gap-6 justify-items-center">
           {education.map((edu, index) => (
             <div key={index} className="max-w-[350px]">
-              <div className={` rounded-full mb-8`}>
-                <img src={edu.icon} alt="" />
+              <div className={`rounded-full mb-8`}>
+                <img className="mx-auto" src={edu.icon} alt="" />
               </div>
               <h5 className="font-semibold text-foreground text-2xl mb-4">{edu.degree}</h5>
               <p className="text-secondary text-sm font-medium">{edu.school}</p>

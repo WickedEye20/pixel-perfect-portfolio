@@ -8,108 +8,227 @@ import deloitte from "@/assets/work_exp/deloitte.png";
 import certimap from "@/assets/work_exp/certimap.png";
 import cgi from "@/assets/work_exp/cgi.png";
 import lm from "@/assets/work_exp/lm.png";
-import gmu from "@/assets/work_exp/gmu.png";
-import vts from "@/assets/work_exp/vts.png";
+import gmu from "@/assets/work_exp/vts.png";
+import vts from "@/assets/work_exp/gmu.png";
 
 const WorkExperience = () => {
+    const list_style = "relative before:absolute before:w-1.5 before:h-1.5 before:top-1 before:left-0 before:bg-primary before:rounded-full pl-4";
     const positions = [
         {
             id: "waltcorp",
             title: "Sr. Product Manager - GTM & Sales Enablement",
             company: "Waltcorp",
             logo: waltcorp,
-            responsibilities: [
-                "Led environment migration from GCP to AWS, optimizing resources, ensuring seamless test-to-production application deployment",
-                "Led technical pre-sales including delivering solution demos, developing proof-of-concepts (PoCs), and conducted technical workshops",
-                "Optimized Amazon CloudFront and Route 53 services of the learning management system LMS backend to stream low latency HD video content",
-                "Enabled sales and business development teams and processes to generate and convert leads into profitable clients"
-            ]
+            responsibilities: (<>
+                <ul className="space-y-3">
+                    <li className={list_style}> Led environment migration from GCP to AWS, optimizing resources, ensuring seamless test-to-production application deployment
+
+                    </li>
+                    <li className={list_style}>
+                        Led technical pre-sales including delivering solution demos, developing proof-of-concepts (PoCs), and conducted technical workshops
+                    </li>
+                    <li className={list_style}>
+                        Optimized Amazon CloudFront and Route 53 services of the learning
+                        management system LMS backend to stream low latency HD video content
+                    </li>
+                    <li className={list_style}>
+                        Enabled sales and business development teams and processes to generate and convert leads into profitable clients
+                    </li>
+
+                </ul>
+            </>)
         },
         {
             id: "deloitte",
             title: "Global Engagement & Product Training Lead",
             company: "Deloitte Consulting",
             logo: deloitte,
-            responsibilities: [
-                "Managed global DAM asset engagement Training & Adoption persona-focused professional enablement for 13+ Fortune 500 client teams",
-                "Led readiness, L&D design, and product adoption strategy for account, including training content including live training sessions, product demonstrations, and office hours",
-                "Designed L&D, ML, LLM/AI/GenAI and LMS Engineering-branded LI/SAP/Salesforce Learning module for multiple technical platforms",
-                "Developed MLOps, PyTorch, TensorFlow for ML-based DL analytics and digital AI-related workloads while also leading production-grade solution deployments",
-                "Deployed and managed a 360, cloud and service-infrastructure solution, efficient change management in-person portfolio live audits in California",
-                "Project and product performed by Amazon, customer success and ServiceNow to product/services and embedded XML/JS implementations"
-            ]
+            responsibilities: (<>
+                <p className="mb-3">Led and managed a cross-continent Engagement, Training & Adoption program focusing on technical enablement of 10+ Fortune 500 client teams</p>
+                <ul className="space-y-3">
+                    <li className={list_style}>
+                        Strategized and steered global Skill &amp; Certification Management
+                        initiative for imparting AI, ML, NLP, MLOps and ML Engineering training
+                        customized to meet the persona-specific organizational development needs
+                    </li>
+                    <li className={list_style}>
+                        Engineered MLOps, NLP use cases and curriculum to nurture existing
+                        client relationships, attract prospective customers and build sales
+                        pipelines
+                    </li>
+                    <li className={list_style}>
+                        Advised and engaged critical clients and vendors on how to efficiently
+                        leverage organic IP/ platform for maximizing their profitability
+                    </li>
+                    <li className={list_style}>
+                        Trained and enabled engineering, pre-sales, customer success and MarCom
+                        teams on product technicalities and onboarded 1000+ professionals
+                    </li>
+                </ul>
+            </>)
         },
         {
             id: "certimap",
             title: "Technical Product Manager - GTM & Pre-Sales Enablement",
             company: "Certimap",
             logo: certimap,
-            responsibilities: [
-                "Managed competitive intelligence/trial/product team requirements/customer success feedback from enterprise customers along with cross-functional stakeholder engagement objectives and operational status",
-                "Acted as the lead product manager and stakeholder who owned multiple programs: 10,000 members in marketing, feedback, CXO presentations, and dashboards for enterprise",
-                "Closely with agents on strategy/key deliveries, change infrastructure, cross-platform and define executive product/feature and commercialization goals",
-                "Performing AI score sheets and reports for 6 months of fee line-item engagement analysis (CRM-to-LMS) training ops",
-                "Designed AI/ML/Analytics, production and risk data pricing and reports alongside cross-functional Product, Marketing, Legal, Sales, and Engineering",
-                "For the relaunch of B2B enterprise skills platform for video-on-demand, text-to-audio, and managed program in line with key persona growth in SaaS product at top startups",
-                "Developed and implemented a detailed analysis and assessment framework as an extension of GTM strategy and presented as a winning product commercially",
-                "12 months pre-sales within strategy development training programs with current sales and $500,000-40,000 in a span of 12 months intensive exclusive customer product adoption"
-            ]
+            responsibilities: (<>
+                <p className="mb-3">Managed, mentored, and guided five scrum teams to develop and deliver software (LMS), curriculum, and e-learning products for a cloud-based SaaS business aligned to the enterprise product strategy and organizational vision</p>
+                <ul className="space-y-3">
+                    <li className={list_style}> Acted as the lead product owner and architected end-to-end system
+                        (LMS), including frontend, backend, DB, microservices, and deployment
+                        infrastructure
+                    </li>
+                    <li className={list_style}>
+                        Liaised with sponsors, change leaders, change champions, power users and
+                        defined business product roadmap, and transformation goals
+                    </li>
+                    <li className={list_style}>
+                        Optimized Amazon CloudFront and Route 53 services of the learning
+                        management system LMS backend to stream low latency HD video content
+                    </li>
+                    <li className={list_style}>
+                        Oversaw the technical architecture and AI Solution
+                        engineering through the entire project/product lifecycle to ensure the health of project KPIs and OKRs
+                    </li>
+                    <li className={list_style}>
+                        Partnered closely with engineering and DevOps teams to create user roles
+                        and security groups for identity and access management (IAM) of premium
+                        and free users of the product
+                    </li>
+                    <li className={list_style}>
+                        Developed and implemented a detailed and well-differentiated
+                        go-to-market (GTM) strategy and positioned e-learning products
+                        strategically
+                    </li>
+                    <li className={list_style}> Enabled pre-sales and business development teams generate and convert
+                        leads worth USD 200,000 in a span of 12 months and achieve sustained
+                        product adoption </li>
+                </ul>
+            </>)
         },
         {
             id: "cgi",
             title: "Senior Consultant - OCM, Curriculum & Product Adoption",
             company: "CGI",
             logo: cgi,
-            responsibilities: [
-                "Designed, designed, delivered products training on, and certified digital/tech-facing organizational adoption center persona for the Cerner/Oracle digital workflow rollout, as registered Oracle network admin/sys DBA",
-                "Designed, developed, prototyped and simplified better than minimal or, 56K to 60+ platforms: SAP, logistics via AI, 4+ Microsoft SQL, Vision, and SharePoint",
-                "Contracted processes, and blueprints are more approachable on developing performance metrics, core strategy and design frameworks, data analysis, AI-based, and infrastructure and planning models based for 200+ (assistant managers)",
-                "Delivered metrics, technical strategy and RFR data to measure a collection of solutions, integration, briefings, communications and across-the-line insights on AI in Figma, InDesign, and JIRA workflows",
-                "Streamlined business dashboards with a Machine (hybrid systems), by workflow training for efficiencies and report SDK via high-by-day implementation needs",
-                "Critically researched the ways to gauge mass adoption/pipeline of data that can produce an energy service product/outcomes to match trends and digital/workflow interface for projects management at scale (mobility in NYC)",
-                "Gained travel data on new offerings, workforce and product by developing on-database in both content rollout, various IT-digital change adoption of 50+ to/from an 8k with mobile contribution in various product"
-            ]
+            responsibilities: (<>
+                <p className="mb-3">Developed, designed, delivered systems training on advanced digital systems being integrated with client operations on a large scale digital transformation and organizational change management project.</p>
+                <ul className="space-y-3">
+                    <li className={list_style}>
+                        Designed, developed, and deployed engaging e-learning courses on ARM (a
+                        CGI patented SaaS application) using Articulate 360, Vyond and
+                        SharePoint.
+                    </li>
+                    <li className={list_style}>
+                        Collected, processed, and transformed users' psychometric and learning
+                        performance data based on strategically designed exit surveys, end of
+                        class questionnaire and pop-up quizzes for 500+ classroom learners.
+                    </li>
+                    <li className={list_style}>
+                        Defined metrics, collected strategic KPI data to measure effectiveness
+                        of systems integration, technical training, communication and share
+                        useful insights with development, testing and OCM teams.
+                    </li>
+                    <li className={list_style}>
+                        Developed Tableau dashboards as decision support systems for
+                        decision making for effectiveness enhancement initiatives by training
+                        implementation team.
+                    </li>
+                    <li className={list_style}>
+                        Trained &amp; consulted client employees through deployment of ARM packages
+                        to manage gas and electric assets to adapt through digital
+                        transformation for effective management of assets installed in NYC.
+                    </li>
+                    <li className={list_style}>
+                        Spearheaded data driven change adoption analytics by developing rich
+                        dashboards in Tableau to report effectiveness of digital change adoption
+                        at Con Edison on a multi-million-dollar Digital Transformation project.
+                    </li>
+                </ul>
+            </>)
         },
         {
             id: "lm",
             title: "Machine Learning Engineer",
             company: "Lockheed Martin",
             logo: lm,
-            responsibilities: [
-                "The project was sponsored by Lockheed Martin by Systems Engineering and Operations Research Department of Volgenau School of Engineering, GMU. No research data contribution to third-party with any benefits. Main research was guided/funded for Multiple School of Engineering",
-                "Workflow AI, neural network-based, process UX/UI and machine learning (collaboration with project reps, Multiple, -deep, -mobile, with SQL Visual) on-file for managing an auto-defined Pattern analytics, AI cover data. This ASE represents on AI product to build/set-up ML-based DL features considering Visual handling",
-                "Text-Embedded custom linear frameworks 90+ pattern training/batch-systems data distribution at 68%",
-                "Used Monte Carlo simulation on to predict the performance of the wiper arm morphed in the research/analysis",
-                "Updated the anomaly, detected the cell with the SAS/APL data, to calibrate GL curve as an analytical image (testing primary)"
-            ]
+            responsibilities: (<>
+                <p className="mb-3">The project was sponsored by Lockheed Martin to Systems Engineering and Operations Research Department of Volgenau School of Engineering, GMU. The research was conducted in collaboration with Lockheed Martin experts and graduate students of Volgenau School of Engineering.</p>
+                <ul className="space-y-3">
+                    <li className={list_style}>
+                        Modelled a decision support system (DSS) in collaboration with Lockheed
+                        Martin experts using Machine Learning
+                        on AIS/ GPS data (5 million entries) availed from Global Fishing Watch
+                        and Planet Labs. The DSS can assist law
+                        enforcement in identification and tracking of vessels conducting illegal
+                        fishing.
+                    </li>
+                    <li className={list_style}>
+                        Trained Generalised Linear Model (GLM) with gradient boosting which gave
+                        a Gini index of 0.955.
+                    </li>
+                    <li className={list_style}>
+                        Used Monte Carlo simulation to predict the path of the vessel once
+                        intercepted in the restricted area.
+                    </li>
+                    <li className={list_style}>
+                        Tested other models like Random Forest on the AIS/GPS data to enhance
+                        the accuracy of prediction of illegal fishing activity.
+                    </li>
+                </ul>
+            </>)
         },
         {
             id: "gmu",
             title: "Web Developer & Trainer",
             company: "Volgenau School of Engineering, George Mason University",
             logo: gmu,
-            responsibilities: [
-                "Responsive Web Design/UI/UX from extreme to multi-media level, to very globally, PHP, or mobile for customers as full-time Program, this EDU, PY/YAML JavaScript, ALP, Amazonics and Selenium-python within UI, web / PHP, JavaScript Application (Cy, Net, Me, are) a graduate Teaching Assistantship for VT CS, MasterSoft and R from our work in ML/DS, multi-apply (custom role) and Dev, For ASD",
-                "As a Graduate Teaching assistant at Volgenau School of Engineering, George Mason University, my responsibilities were as follows",
-                "Taught and graded undergraduate students in Computer Science and IT for Hackathon live JavaScript/HTML",
-                "Delivered technical job interviews at 50% Ruby 2 Py, Multi-language, bi-rounded mix monthly web-development to multi-tech like in Cyber Programming app, startup-fix, all back-end basics",
-                "Developed patterns for NIST, NIH extended training to discuss the framing of cybersecurity"
-            ]
+            responsibilities: (<>
+                <p className="mb-3">Responsive Web Design(RWD) has become an ineluctable need for any industry. RWD is enabled by dexterous use of technologies like CSS, HTML5, JavaScript etc. Animation and Motion Graphics are at the soul of Rich Internet Applications(RIAs). I worked as a Graduate Teaching Assistant for courses IT 123, Multimedia & Web Design and IT 315, Mobile Application Development (Swift for iOS).</p>
+                <p className="mb-3">As a Graduate Teaching Assistant at Volgenau School of Engineering, George Mason University, my responsibilities were as follows:</p>
+                <ul className="space-y-3">
+                    <li className={list_style}>
+                        Taught and graded undergraduate students of Computer Science and IT in
+                        Responsive Web Design(RWD)</li>
+                    <li className={list_style}>
+                        Developed technical curriculum for SWIFT, Obj C, Web Design etc.
+                        Interacted with students via online and
+                        in person help sessions to resolve their technical queries.</li>
+                    <li className={list_style}>
+                        Conducted quizzes, formative and summative exams to evaluate the
+                        learning effectiveness.
+                    </li>
+                </ul>
+            </>)
         },
         {
             id: "vts",
             title: "Technical Curriculum Developer",
             company: "Vidyatech Solutions, Noida, India",
             logo: vts,
-            responsibilities: [
-                "Vidyatech is a company for real-world Digital/PHP-ML demo, to build web and app, atop 1000+ education with a mix of Content Publishing, CMS, Embedded App/Database, Saas B2B, Infosolution, Access, Sage Portal in Python/AWS, Application Deployment, GIT and providing Managed Services for global clients like Microsoft, Symantec, Pearson, Thomson Reuters NPP, Wiley Inc and others like",
-                "Key highlights to projects I created here as a: Senior Consultant, Instructional Designer, and technically include the following",
-                "Developed Cd, and SSIS concepts for Curriculum training/lab, PPT practice, Microsoft Curriculum on multiple fronts of app/analytics of Selenium to in JS",
-                "Assessment online interview type for Multiple Applications/Quality",
-                "Developed planned and led Day, Teaching foundations in (OIM) In-class course Trainers",
-                "Designed and developed MCQ series, game, content, visual creation",
-                "Wrote technical/views on Cyber Security for Students and 'Ethical'"
-            ]
+            responsibilities: (<>
+                <p className="mb-3">Vidyatech, a company led and managed by IIT-IIM alumni, builds world class cloud based solutions in the areas of Content Technology, CMS, SharePoint Applications, Data & Web Analytics, Mobility, Cyber Security, IT infrastructure, Application Development, IOT and provides Managed Services for global giants like Microsoft, Symantec, Pearson, Thomson Reuters, NIIT, Wipro to name a few.</p>
+                <p className="mb-3">Key highlights of projects I undertook as an Senior Consultant - Instructional Design at Vidyatech, include the following:</p>
+                <ul className="space-y-3">
+                    <li className={list_style}>
+                        Developed ILT and WBT modules for Fortune 500 giants like Symantec,
+                        Microsoft Corporation using advanced principles of Instructional Design.
+                    </li>
+                    <li className={list_style}>
+                        Authored market research report on "Global Analytics Market".</li>
+                    <li className={list_style}>
+                        Reviewed content on Cyber Security developed by SMEs (Subject Matter
+                        Experts).
+                    </li>
+                    <li className={list_style}>
+                        Designed and storyboarded problem, game, scenario based learning.
+                    </li>
+                    <li className={list_style}>
+                        Wrote technical modules on Cyber Security for Students and Trainers.
+                    </li>
+                </ul>
+            </>)
         }
     ];
 
@@ -173,8 +292,8 @@ const WorkExperience = () => {
                                                 }
                                             }}
                                             className={`text-sm lg:text-base text-left w-full transition-colors ${activePosition === position.id
-                                                    ? "text-primary font-bold"
-                                                    : "text-muted-foreground hover:text-foreground"
+                                                ? "text-primary font-bold"
+                                                : "text-muted-foreground hover:text-foreground"
                                                 }`}
                                         >
                                             {position.title}
@@ -203,14 +322,10 @@ const WorkExperience = () => {
                                         <h4 className="text-base font-bold text-black mb-4">{job.title}</h4>
 
                                         {/* Responsibilities */}
-                                        <ul className="space-y-3">
-                                            {job.responsibilities.map((resp, idx) => (
-                                                <li key={idx} className="flex items-start gap-3 text-secondary opacity-70 font-medium">
-                                                    <span className="w-1 h-1 rounded-full bg-secondary mt-2 flex-shrink-0"></span>
-                                                    <span className="text-sm leading-relaxed">{resp}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <div className="text-sm text-muted-foreground">
+                                        {job.responsibilities}
+                                        </div>
+
                                     </div>
                                 ))}
                             </div>

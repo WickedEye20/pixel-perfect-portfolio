@@ -13,7 +13,7 @@ const HeroSection = () => {
 
   return (
     <section className="hero-section py-32 lg:py-48">
-      <div className="container mx-auto text-white">
+      <div className="container mx-auto text-white text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
           Abhishek Misra
         </h1>
@@ -22,8 +22,8 @@ const HeroSection = () => {
         </p>
 
         <div className="">
-          <h3 className="text-2xl font-medium mb-8">Competencies</h3>
-          <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+          {/* <h3 className="text-2xl font-medium mb-8">Competencies</h3> */}
+          <div className="grid grid-cols-2 gap-x-8 gap-y-6 justify-items-center">
             {competencies.map((comp, index) => (
               <div key={index} className="competency-item">
                 <span className="competency-bullet"></span>

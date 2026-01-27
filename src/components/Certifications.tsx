@@ -17,7 +17,7 @@ const Certifications = () => {
 
   return (
     <section id="certifications" className="light-section py-28">
-      <div className="container">
+      <div className="container text-center">
         <h2 className="section-title text-foreground">Certifications</h2>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3">

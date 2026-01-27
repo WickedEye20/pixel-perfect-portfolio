@@ -17,7 +17,7 @@ const Fortune500Projects = () => {
 
   return (
     <section id="projects" className="light-section py-28 scroll-mt-32">
-      <div className="container">
+      <div className="container text-center">
         <h2 className="section-title text-foreground">Fortune 500 Projects</h2>
         
         <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center">

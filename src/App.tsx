@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import WorkExperience from "./pages/WorkExperience";
 import TechnicalExperience from "./pages/TechnicalExperience";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollToHash from "./components/ScrollToHash";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <ScrollToHash />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/work-experience" element={<WorkExperience />} />

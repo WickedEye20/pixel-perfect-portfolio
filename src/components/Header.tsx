@@ -12,8 +12,8 @@ const Header = () => {
   const navLinks = [
     { label: "Brief Info", path: "/", hash: "about" },
     { label: "Tech Skills", path: "/", hash: "skills" },
-    { label: "Experience", path: "/work-experience" },
-    { label: "Projects", path: "/technical-experience" },
+    { label: "Experience", path: "/", hash: "experience" },
+    { label: "Projects", path: "/", hash: "projects" },
     { label: "Education", path: "/", hash: "education" },
     { label: "Testimonials", path: "/", hash: "testimonials" },
     { label: "Contact", path: "/", hash: "contact" },

@@ -23,8 +23,8 @@ const Contact = () => {
   return (
     <section id="contact" className="light-section py-32 scroll-mt-32">
       <div className="container">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">Get in Touch</h2>
-        <div className="max-w-xl p-6 rounded-xl bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.078)]">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">Get in Touch</h2>
+        <div className="max-w-xl p-6 rounded-xl bg-white shadow-[0_4px_12px_0_rgba(0,0,0,0.078)] mx-auto">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="ct_name" className="block text-sm font-medium text-muted-foreground mb-1.5">
