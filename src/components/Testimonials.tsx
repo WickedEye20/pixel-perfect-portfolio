@@ -42,7 +42,7 @@ const Testimonials = () => {
 
         {/* LEFT – TEXT */}
         <div className="flex-1 container pt-10 min-w-0">
-          <h2 className="section-title text-foreground mb-8">
+          <h2 className="section-title text-foreground mb-8 test">
             Testimonials
           </h2>
 
@@ -58,7 +58,7 @@ const Testimonials = () => {
           >
             {testimonials.map((item, index) => (
               <SwiperSlide key={index}>
-                <p className="text-black text-xl lg:text-2xl italic">
+                <p className="text-black text-xl lg:text-2xl italic text-center">
                   "{item.text}"
                 </p>
               </SwiperSlide>
