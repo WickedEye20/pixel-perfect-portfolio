@@ -165,7 +165,7 @@
   }
 
   .competency-item {
-    @apply flex items-center gap-2 text-white/90 text-sm 2xl:text-base;
+    @apply flex items-center gap-2 text-white/90 text-sm 2xl:text-base bg-white/10 p-4 w-full justify-center;
   }
 
   .competency-bullet {

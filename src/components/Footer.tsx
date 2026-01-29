@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white text-base">
-            Copyright © 2025, Abhishek Misra | All Right Reserved
+            Copyright © {new Date().getFullYear()}, Abhishek Misra | All Right Reserved
           </p>
 
           <div className="flex items-center gap-3">

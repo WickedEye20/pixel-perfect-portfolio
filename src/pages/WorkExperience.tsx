@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Fortune500Projects from "@/components/Fortune500Projects";
+import sams_club from "@/assets/work_exp/sams_club.png";
 import waltcorp from "@/assets/work_exp/waltcorp.png";
 import deloitte from "@/assets/work_exp/deloitte.png";
 import certimap from "@/assets/work_exp/certimap.png";
@@ -14,6 +15,24 @@ import vts from "@/assets/work_exp/gmu.png";
 const WorkExperience = () => {
     const list_style = "relative before:absolute before:w-1.5 before:h-1.5 before:top-1 before:left-0 before:bg-primary before:rounded-full pl-4";
     const positions = [
+        {
+            id: "sams_club",
+            title: "Sr. Technical Product Adviser (Fractional) - GTM & Sales Enablement",
+            company: "Sam's Club",
+            logo: sams_club,
+            responsibilities: (<>
+                <ul className="space-y-3">
+                    <li className={list_style}> Optimizing vendor partnerships with 5 key suppliers, ensuring timely delivery and contract compliance.
+                    </li>
+                    <li className={list_style}>
+                        Streamlining product sales processes to improve client satisfaction (CRM) and accelerate revenue growth.
+                    </li>
+                    <li className={list_style}>
+                        Controlling inventory operations to maintain accurate stock levels and timely replenishment, improving availability and reducing shortages.
+                    </li>
+                </ul>
+            </>)
+        },
         {
             id: "waltcorp",
             title: "Sr. Product Manager - GTM & Sales Enablement",

@@ -5,10 +5,11 @@ const HeroSection = () => {
     "AI Product Management (APM)",
     "Stakeholder, Leadership & Skills",
     "Enterprise Solution Delivery (ESD)",
-    "Training & Certifications (T&C)",
+    "eLearning, LMS, LXP & EdTech",
     "Product Lifecycle Management (PLM)",
-    "Customer Success & Enablement",
+    "Training & Certifications (T&C)",
     "Technical Product/Program Management (TPM)",
+    "Customer Success & Enablement",
   ];
 
   return (
@@ -23,10 +24,10 @@ const HeroSection = () => {
 
         <div className="">
           {/* <h3 className="text-2xl font-medium mb-8">Competencies</h3> */}
-          <div className="grid grid-cols-2 gap-x-8 gap-y-6 justify-items-center">
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-[1px] justify-items-center mx-auto max-w-[1400px]">
             {competencies.map((comp, index) => (
               <div key={index} className="competency-item">
-                <span className="competency-bullet"></span>
+                {/* <span className="competency-bullet"></span> */}
                 <span className="text-sm md:text-base font-semibold">{comp}</span>
               </div>
             ))}
