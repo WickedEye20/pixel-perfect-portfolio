@@ -60,15 +60,12 @@ const TechSkills = () => {
               <p className="text-muted-foreground text-base mb-6">
                 {skill.description}
               </p>
-              <Link
+              {/* <Link
                 to={`/technical-experience#${skill.slug}`}
                 className="text-base font-medium text-primary py-2 px-6 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 inline-block mt-auto"
               >
                 Learn More
-              </Link>
-              {/* <a href="#" className="inline-block text-base font-medium text-primary py-2 px-6 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300">
-                Learn More
-              </a> */}
+              </Link> */}
             </div>
           ))}
         </div>

@@ -3,13 +3,13 @@ const HeroSection = () => {
     "GenAI, LLMs & Agentic AI",
     "GTM Strategy & Pre-Sales",
     "AI Product Management (APM)",
-    "Stakeholder, Leadership & Skills",
+    "Strategic Client Engagement",
     "Enterprise Solution Delivery (ESD)",
     "eLearning, LMS, LXP & EdTech",
     "Product Lifecycle Management (PLM)",
     "Training & Certifications (T&C)",
-    "Technical Product/Program Management (TPM)",
-    "Customer Success & Enablement",
+    "Technical Product & Program Management (TPM)",
+    "Customer Education & Enablement",
   ];
 
   return (

@@ -3,8 +3,8 @@ import abhi_img from "../assets/abhi_m_image.png";
 const BriefIntro = () => {
   return (
     <section id="about" className="gray-section scroll-mt-32">
-      <div className="flex flex-col md:flex-row items-center">
-        <div className="flex-shrink-0 p-16 lg:p-28 primary_gradient w-full md:w-auto">
+      <div className="flex flex-col md:flex-row items-stretch">
+        <div className="flex-shrink-0 p-16 lg:p-28 primary_gradient w-full md:w-auto flex items-center">
           <img
             src={abhi_img}
             alt="Abhishek Misra"
@@ -12,11 +12,22 @@ const BriefIntro = () => {
           />
         </div>
 
-        <div className="flex-1 px-[4vw] py-6 md:py-0 md:px-16 lg:px-24 text-center">
+        <div className="flex-1 px-[4vw] py-6 md:py-6 md:px-16 lg:px-24 text-center flex flex-col justify-center">
           <h2 className="section-title text-foreground mb-5">Brief Intro</h2>
-          <p className="text-secondary text-base font-medium">
+          <div className="text-secondary text-base font-medium">
+            {/* <p className="text-secondary text-base font-medium">
             Enterprise Solution Delivery (ESD) & Technical Program Management (TPM): Diligently led & managed cross-functional teams for over 5+ years to deliver tailored cloud (AWS, GCP, Azure) based solutions on time and under budget, ensuring alignment with client needs, business goals and the larger Enterprise Architecture (EA). Architected and developed end-to-end ML pipelines leveraging
-          </p>
+          </p> */}
+            <p>
+              Technical Program Manager with 7+ years of experience leading large, cross-functional engineering, product, and business teams to deliver cloud-native enterprise platforms across AWS, GCP, and Azure. Proven track record owning end-to-end program execution, including roadmap planning, dependency management, risk mitigation, and delivery against cost, schedule, and quality targets. Experienced in operating at scale within complex enterprise environments while aligning execution to business objectives and enterprise architecture.
+            </p>
+            <p>
+              Hands-on experience delivering production-grade ML pipelines, partnering with data science, engineering, and platform teams to translate customer and business problems into scalable AI solutions. Led AI use-case definition, rapid prototyping, and PoC-to-production transitions, with accountability for product requirements, prioritization, and delivery outcomes. Strong at balancing technical depth and product judgment, ensuring AI initiatives drive measurable impact beyond experimentation.
+            </p>
+            <p>
+              10+ years of experience supporting GTM strategy, pre-sales, and enterprise adoption for cloud, AI, and EdTech products, including engagements with multiple Fortune 500 customers. Partnered closely with sales, leadership, and delivery teams on solution positioning, technical enablement, and customer onboarding to drive adoption and long-term value. SAFe® 6-certified Agile Product Manager and Practice Consultant, experienced in scaled agile execution, product lifecycle management, and organizational change.
+            </p>
+          </div>
           <div className="mt-4">
             <a href="https://www.linkedin.com/in/abhishekmishra11/" target="_blank" className="inline-block">
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 25" fill="none">
