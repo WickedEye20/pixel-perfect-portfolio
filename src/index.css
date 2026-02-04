@@ -53,8 +53,7 @@
       hsl(0 0% 100%) 0%,
       hsl(210 20% 98%) 100%
     );
-    --gradient-accent: linear-gradient(178.07deg, #2185D5 8.37%, #000000 87.4%);
-;
+    --gradient-accent: linear-gradient(178.07deg, #2185d5 8.37%, #000000 87.4%);
   }
 
   .dark {
@@ -87,7 +86,11 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: "Roboto", system-ui, -apple-system, sans-serif;
+    font-family:
+      "Roboto",
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
 
   html {
@@ -101,7 +104,11 @@
   h5,
   h6 {
     @apply font-bold;
-    font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+    font-family:
+      "Space Grotesk",
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
 }
 
@@ -137,7 +144,7 @@
   }
 
   .logo-card {
-    @apply flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300;
+    @apply flex items-center justify-center mt-10 grayscale hover:grayscale-0 transition-all duration-300;
   }
 
   .cert-badge {
@@ -176,5 +183,68 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400;
+  }
+}
+
+.swiper-pagination.swiper-pagination {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  background: linear-gradient(152.07deg, #2185d5 8.37%, #000000 87.4%);
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  transition: 300ms ease;
+}
+
+.swiper-pagination-bullet-active {
+  width: 48px;
+}
+
+.cert-badge:nth-child(2), .cert-badge:nth-child(4), .cert-badge:nth-child(5), .cert-badge:nth-child(6), .cert-badge:nth-child(8) {
+  border: 1px solid #E2E2E2;
+}
+
+.cert-badge:nth-child(2) {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.cert-badge:nth-child(4) {
+  border-left: 0;
+  border-right: 0;
+}
+
+.cert-badge:nth-child(6) {
+  border-right: 0;
+  border-left: 0;
+}
+
+.cert-badge:nth-child(8) {
+  border-bottom: 0;
+  border-top: 0;
+}
+
+@media (max-width: 1024px) {
+  .cert-badge:nth-child(2), .cert-badge:nth-child(4), .cert-badge:nth-child(5), .cert-badge:nth-child(6), .cert-badge:nth-child(8) {
+    border: none;
+  }
+  .cert-badge:nth-child(odd) {
+    border-right: 1px solid #E2E2E2;
+  }
+
+  .cert-badge.cert-badge {
+    border-bottom: 1px solid #E2E2E2;
+  }
+
+  .cert-badge.cert-badge:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .cert-badge.cert-badge {
+    border: none;
   }
 }

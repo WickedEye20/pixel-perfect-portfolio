@@ -5,6 +5,10 @@ import process_management_img from "../assets/skills/project_management.svg";
 import team_efficiency from "../assets/skills/team_efficiency.svg";
 import tech_project_img from "../assets/skills/tech_project.svg";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const TechSkills = () => {
   const skills = [
@@ -17,7 +21,7 @@ const TechSkills = () => {
     {
       icon: data_science_img,
       title: "Data Science & AI",
-      description: "Python, NumPy, pandas, NLTK, Kira, Word2Vec, TF-IDF, TensorFlow, AWS Textract, Python, scikit-learn, PyTorch, TensorFlow, Chat-GPT, LLMs, Generative Adversarial Networks (GANs), ANN, RNN, CNN AutoML, MLOps, Recommender Systems, GenAI, LLMs, Reinforcement Learning, Explainable AI, MLFlow, Kubeflow, Kubernetes, Docker, ML Pipeline Orchestration, Evidently, Grafana",
+      description: "Python, NumPy, pandas, NLTK, Kira, Word2Vec, TF-IDF, TensorFlow, AWS Textract, scikit-learn, PyTorch, Chat-GPT, LLMs, Generative Adversarial Networks (GANs), ANN, RNN, CNN AutoML, MLOps, Recommender Systems, GenAI, Reinforcement Learning, Explainable AI, MLFlow, Kubeflow, Kubernetes, Docker, ML Pipeline Orchestration, Evidently, Grafana",
       slug: "data-science-ai",
     },
     {
@@ -40,17 +44,44 @@ const TechSkills = () => {
     },
     {
       icon: team_efficiency,
-      title: "GTM, Pre-Sales & Enterprise Engineering",
+      title: "GTM, Pre-Sales & Adoption Engineering",
       description: "Solution Architecture, MQL Analysis, Use Case Engineering, Competitor Analysis, PoC Development, Stakeholder Alignment, Launch Strategy, Lead Discovery, Pricing Strategy, Tracking & Reporting KPIs, B2B, B2C & B2G Models, RFP/ RFI/ Bid Response Management, Proposal Writing, Contract, SLAs & Compliance Management, AIDA, ICP Mapping, Change Management, Client Engagement",
       slug: "organizational-change-management",
     },
   ];
 
   return (
-    <section id="skills" className="py-24 scroll-mt-32">
+    <section id="skills" className="py-10 md:py-24 scroll-mt-32">
       <div className="container text-center">
         <h2 className="section-title text-foreground">Tech Skills</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        {/* 🔹 Mobile Swiper */}
+        <div className="md:hidden">
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={16}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+          >
+            {skills.map((skill, index) => (
+              <SwiperSlide key={index} className="p-3 pb-10 ">
+                <div className="skill-card">
+                  <div className="flex flex-col gap-3 mb-4">
+                    <img src={skill.icon} className="w-20 h-20 mx-auto" />
+                    <h5 className="font-semibold text-foreground">
+                      {skill.title}
+                    </h5>
+                  </div>
+                  <p className="text-muted-foreground text-base">
+                    {skill.description}
+                  </p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, index) => (
             <div key={index} className="skill-card">
               <div className="flex flex-col gap-3 mb-4">
@@ -60,12 +91,6 @@ const TechSkills = () => {
               <p className="text-muted-foreground text-base mb-6">
                 {skill.description}
               </p>
-              {/* <Link
-                to={`/technical-experience#${skill.slug}`}
-                className="text-base font-medium text-primary py-2 px-6 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 inline-block mt-auto"
-              >
-                Learn More
-              </Link> */}
             </div>
           ))}
         </div>

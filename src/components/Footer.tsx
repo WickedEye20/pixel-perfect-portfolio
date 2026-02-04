@@ -16,8 +16,8 @@ const Footer = () => {
     <footer className="secondary_gradient py-14">
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white text-base">
-            Copyright © {new Date().getFullYear()}, Abhishek Misra | All Right Reserved
+          <p className="text-white text-sm md:text-base">
+            Copyright © {new Date().getFullYear()}, Abhishek Misra | All Rights Reserved
           </p>
 
           <div className="flex items-center gap-3">
@@ -29,7 +29,7 @@ const Footer = () => {
                 className="flex items-center justify-center hover:opacity-75 transition-opacity duration-300"
                 target="_blank"
               >
-                <img src={social.icon} />
+                <img className="w-8 h-8 md:w-auto md:h-auto" src={social.icon} />
               </a>
             ))}
           </div>

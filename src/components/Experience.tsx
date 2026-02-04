@@ -7,12 +7,16 @@ import gmu from "../assets/exp/gmu.png";
 import certimap from "../assets/exp/certimap.png";
 import vts from "../assets/exp/vts.png";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 
 const Experience = () => {
   const experiences = [
     {
-      company: "SAM'S CLUB",
+      company: "Sam's Club",
       role: "Sr. Technical Product Adviser - CX, GTM & Sales Enablement",
       period: "PRESENT",
       logo: sams_club,
@@ -78,11 +82,43 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="gray-section py-24 scroll-mt-32">
+    <section id="experience" className="gray-section py-10 md:py-24 scroll-mt-32">
       <div className="container text-center">
         <h2 className="section-title">Experience</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-[30px]">
+        {/* 🔹 Mobile Swiper */}
+        <div className="md:hidden">
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={16}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+          >
+            {experiences.map((exp, index) => (
+              <SwiperSlide key={index} className="p-3 pb-10 ">
+                <div key={index} className="experience-card">
+                  <div className="flex flex-col items-center gap-4 h-full">
+                    <div className={`min-h-[130px] md:min-h-[160px] flex items-center justify-center flex-shrink-0 text-white font-bold text-xs`}>
+                      <img src={exp.logo} alt="" />
+                    </div>
+                    <div className="flex-1 min-w-0 text-center flex flex-col gap-4 items-center bg-[#fafafa] p-8 w-full">
+                      <p className="text-primary text-base mt-1 font-bold">{exp.company}</p>
+                      <h5 className="text-black mt-1 font-bold">{exp.role}</h5>
+                      <Link
+                        to={`/work-experience#${exp.slug}`}
+                        className="text-base font-medium text-primary py-2 px-6 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 inline-block mt-auto"
+                      >
+                        Read More
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
           {experiences.map((exp, index) => (
             <div key={index} className="experience-card">
               <div className="flex flex-col items-center gap-4 h-full">
@@ -98,8 +134,6 @@ const Experience = () => {
                   >
                     Read More
                   </Link>
-
-                  {/* <a href={`/work-experience#${exp.slug}`} className="text-base font-medium text-primary py-2 px-6 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 inline-block mt-auto">Read More</a> */}
                 </div>
               </div>
             </div>

@@ -38,7 +38,7 @@ const Testimonials = () => {
       id="testimonials"
       className="gray-section py-10 md:py-0 scroll-mt-32"
     >
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] items-center">
 
         {/* LEFT – TEXT */}
         <div className="flex-1 container py-10 min-w-0">
@@ -67,7 +67,7 @@ const Testimonials = () => {
         </div>
 
         {/* RIGHT – PHOTO + SIDE BUTTONS */}
-        <div className="flex-shrink-0 primary_gradient md:w-[460px] order-first md:order-last h-full">
+        <div className="flex-shrink-0 primary_gradient lg:w-[460px] order-first lg:order-last h-full">
           <div className="flex items-start justify-center gap-3 p-20 md:p-28 md:py-26 lg:p-35">
 
             {/* PREV */}

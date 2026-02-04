@@ -84,7 +84,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white"
+            className="lg:hidden text-white text-[24px]"
             onClick={() => setIsMenuOpen(true)}
             aria-label="Open Menu"
           >
