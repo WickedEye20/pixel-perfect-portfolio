@@ -13,6 +13,7 @@ import cloudEnggIcon from "@/assets/skills/cloud_engg.svg";
 import projectMgmtIcon from "@/assets/skills/project_management.svg";
 import techProjectIcon from "@/assets/skills/tech_project.svg";
 import teamEfficiencyIcon from "@/assets/skills/team_efficiency.svg";
+import { Helmet } from "react-helmet-async";
 
 const TechnicalExperience = () => {
   const list_style = "relative before:absolute before:w-1.5 before:h-1.5 before:top-1 before:left-0 before:bg-primary before:rounded-full pl-4";
@@ -550,82 +551,89 @@ const TechnicalExperience = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <>
+      <Helmet>
+        <title>Technical Experience | Abhishek Misra</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="Technical Product & Program Management Leader with 15+ years of expertise in AI Product Management, GenAI, LLMs, and Fortune 500 digital transformations." />
+      </Helmet>
+      <div className="min-h-screen bg-background">
+        <Header />
 
-      {/* Page Title Section */}
-      <section className="bg-[#f4f4f4] pt-32 pb-12">
-        <div className="container">
-          <h1 className="text-black text-3xl md:text-4xl font-bold">Technical Experience</h1>
-        </div>
-      </section>
+        {/* Page Title Section */}
+        <section className="bg-[#f4f4f4] pt-32 pb-12">
+          <div className="container">
+            <h1 className="text-black text-3xl md:text-4xl font-bold">Technical Experience</h1>
+          </div>
+        </section>
 
-      {/* Main Content */}
-      <section className="py-16">
-        <div className="container">
-          <div className="grid md:grid-cols-[200px_1fr] lg:grid-cols-[300px_1fr] gap-12">
-            {/* Left Sidebar - Domains */}
-            <div className="md:sticky md:top-28 md:self-start hidden md:block">
-              <h3 className="text-primary text-xl font-bold mb-6">Domains</h3>
-              <ul className="space-y-6">
+        {/* Main Content */}
+        <section className="py-16">
+          <div className="container">
+            <div className="grid md:grid-cols-[200px_1fr] lg:grid-cols-[300px_1fr] gap-12">
+              {/* Left Sidebar - Domains */}
+              <div className="md:sticky md:top-28 md:self-start hidden md:block">
+                <h3 className="text-primary text-xl font-bold mb-6">Domains</h3>
+                <ul className="space-y-6">
+                  {domains.map((domain) => (
+                    <li key={domain.id}>
+                      <button
+                        onClick={() => {
+                          setActiveDomain(domain.id);
+                          const element = document.getElementById(domain.id);
+                          if (element) {
+                            element.scrollIntoView({ behavior: "smooth", block: "start" });
+                          }
+                        }}
+                        className={`text-sm lg:text-base text-left w-full transition-colors ${activeDomain === domain.id
+                          ? "text-primary font-bold"
+                          : "text-muted-foreground hover:text-foreground"
+                          }`}
+                      >
+                        {domain.title}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Right Content - Domains with Accordions */}
+              <div className="space-y-12">
                 {domains.map((domain) => (
-                  <li key={domain.id}>
-                    <button
-                      onClick={() => {
-                        setActiveDomain(domain.id);
-                        const element = document.getElementById(domain.id);
-                        if (element) {
-                          element.scrollIntoView({ behavior: "smooth", block: "start" });
-                        }
-                      }}
-                      className={`text-sm lg:text-base text-left w-full transition-colors ${activeDomain === domain.id
-                        ? "text-primary font-bold"
-                        : "text-muted-foreground hover:text-foreground"
-                        }`}
-                    >
-                      {domain.title}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                  <div
+                    id={domain.id}
+                    key={domain.id}
+                    className="shadow-[0_4px_12px_0_rgba(0,0,0,0.078)] p-6 scroll-mt-32 rounded-xl"
+                  >
+                    {/* Domain Title with Icon */}
+                    <div className="flex items-center gap-3 mb-6">
+                      <img src={domain.icon} alt={domain.title} className="h-8 w-8 object-contain" />
+                      <h4 className="text-lg font-bold text-primary">{domain.fullTitle}</h4>
+                    </div>
 
-            {/* Right Content - Domains with Accordions */}
-            <div className="space-y-12">
-              {domains.map((domain) => (
-                <div
-                  id={domain.id}
-                  key={domain.id}
-                  className="shadow-[0_4px_12px_0_rgba(0,0,0,0.078)] p-6 scroll-mt-32 rounded-xl"
-                >
-                  {/* Domain Title with Icon */}
-                  <div className="flex items-center gap-3 mb-6">
-                    <img src={domain.icon} alt={domain.title} className="h-8 w-8 object-contain" />
-                    <h4 className="text-lg font-bold text-primary">{domain.fullTitle}</h4>
+                    {/* Skills Accordion */}
+                    <Accordion type="single" collapsible className="w-full">
+                      {domain.skills.map((skill, idx) => (
+                        <AccordionItem key={idx} value={`${domain.id}-${idx}`} className="border-b border-border">
+                          <AccordionTrigger className="text-left text-base font-bold text-black hover:no-underline py-6">
+                            {skill.name}
+                          </AccordionTrigger>
+                          <AccordionContent className="text-sm text-muted-foreground pb-4">
+                            {skill.description}
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
                   </div>
-
-                  {/* Skills Accordion */}
-                  <Accordion type="single" collapsible className="w-full">
-                    {domain.skills.map((skill, idx) => (
-                      <AccordionItem key={idx} value={`${domain.id}-${idx}`} className="border-b border-border">
-                        <AccordionTrigger className="text-left text-base font-bold text-black hover:no-underline py-6">
-                          {skill.name}
-                        </AccordionTrigger>
-                        <AccordionContent className="text-sm text-muted-foreground pb-4">
-                          {skill.description}
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

@@ -1,8 +1,8 @@
 const HeroSection = () => {
   const competencies = [
-    "GenAI, LLMs & Agentic AI",
+    "AI Product Management",
     "GTM Strategy & Pre-Sales",
-    "AI Product Management (APM)",
+    "GenAI, LLMs & Agentic AI",
     "Strategic Client Engagement",
     "Enterprise Solution Delivery (ESD)",
     "eLearning, LMS, LXP & EdTech",

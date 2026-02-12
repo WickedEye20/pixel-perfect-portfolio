@@ -11,6 +11,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Index = () => {
   const location = useLocation();
@@ -32,19 +33,30 @@ const Index = () => {
     }
   }, []);
   return (
-    <div className="min-h-screen">
-      <Header />
-      <HeroSection />
-      <BriefIntro />
-      <TechSkills />
-      <Experience />
-      <Fortune500Projects />
-      <Education />
-      <Certifications />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </div>
+
+    <>
+      <Helmet>
+        <title>Abhishek Misra | Technical Product & Program Management Leader</title>
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content="Technical Product & Program Management Leader with 15+ years of expertise in AI Product Management, GenAI, LLMs, and Fortune 500 digital transformations."
+        />
+      </Helmet>
+      <div className="min-h-screen">
+        <Header />
+        <HeroSection />
+        <BriefIntro />
+        <TechSkills />
+        <Experience />
+        <Fortune500Projects />
+        <Education />
+        <Certifications />
+        <Testimonials />
+        <Contact />
+        <Footer />
+      </div>
+    </>
   );
 };
 

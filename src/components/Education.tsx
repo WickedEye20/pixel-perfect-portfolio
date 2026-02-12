@@ -8,21 +8,21 @@ import "swiper/css/pagination";
 const Education = () => {
   const education = [
     {
-      degree: (<>BS (Honors) <span className="block font-normal text-muted-foreground">in</span> Biomedical <br /> Engineering</>),
+      degree: (<>BS (Honors) <span className="block font-normal text-muted-foreground text-lg">in</span> Biomedical <br /> Engineering</>),
       school: "University of Delhi",
       details: "New Delhi, India",
       icon: du,
       bgColor: "bg-blue-600",
     },
     {
-      degree: (<>MTech <span className="block font-normal text-muted-foreground">in</span> Biomedical <br /> Engineering</>),
+      degree: (<>MTech <span className="block font-normal text-muted-foreground text-lg">in</span> Biomedical <br /> Engineering</>),
       school: "Indian Institute of Technology Bombay",
       details: "Mumbai, India",
       icon: iit,
       bgColor: "bg-orange-500",
     },
     {
-      degree: (<>MS <span className="block font-normal text-muted-foreground">in</span> Data Analytics <br /> Engineering</>),
+      degree: (<>MS <span className="block font-normal text-muted-foreground text-lg">in</span> Data Analytics <br /> Engineering</>),
       school: "George Mason University",
       details: "Virginia, USA",
       icon: gmu,

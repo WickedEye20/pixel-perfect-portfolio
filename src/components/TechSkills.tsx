@@ -32,14 +32,14 @@ const TechSkills = () => {
     },
     {
       icon: process_management_img,
-      title: "Process & Program Management",
+      title: "Project & Program Management",
       description: " Lean Agile Leadership, Scaled Agile (SAFe®), Project Scope, Cost Estimation, Budgeting, and Financial Forecasting, Technical Account Management, Requirements Gathering, Resource Allocation, Scheduling, Solution Delivery, Business Process Improvement, SDLC, Sprint planning, Daily Scrum, Cycle Time Reduction, Risk Management, Continuous Process Improvement",
       slug: "project-program-management",
     },
     {
       icon: tech_project_img,
       title: "Technical Product Management",
-      description: "Continuous Exploration, User Centred Design (UCD), Feature - User Story mapping, Feature Prioritization, Product Requirements Documentation (PRD), Launch Strategy, Product Operationalization, GTM & MarCom initiatives, Launch Strategy, Pricing, Defining & Measuring KPIs, Surveying, Product Families & Portfolio, B2B, B2C & B2G Models, Product Lifecycle Management (PLM)",
+      description: "Continuous Exploration, User Centred Design (UCD), Feature - User Story mapping, Feature Prioritization, Product Requirements Documentation (PRD), Launch Strategy, Product Operationalization, Go to Market & MarCom initiatives, Defining & Measuring KPIs, Surveying, Product Families & Portfolio, Product Lifecycle Management (PLM)",
       slug: "technical-product-management",
     },
     {

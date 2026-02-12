@@ -11,6 +11,7 @@ import cgi from "@/assets/work_exp/cgi.png";
 import lm from "@/assets/work_exp/lm.png";
 import gmu from "@/assets/work_exp/vts.png";
 import vts from "@/assets/work_exp/gmu.png";
+import { Helmet } from "react-helmet-async";
 
 const WorkExperience = () => {
     const list_style = "relative before:absolute before:w-1.5 before:h-1.5 before:top-1 before:left-0 before:bg-primary before:rounded-full pl-4";
@@ -35,7 +36,7 @@ const WorkExperience = () => {
         },
         {
             id: "waltcorp",
-            title: "Sr. Product Manager - GTM & Sales Enablement",
+            title: "Sr. AI Product Manager - GTM & Sales Enablement",
             company: "Waltcorp",
             logo: waltcorp,
             responsibilities: (<>
@@ -282,82 +283,89 @@ const WorkExperience = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-background">
-            <Header />
+        <>
+            <Helmet>
+                <title>Work Experience | Abhishek Misra</title>
+                <meta name="robots" content="index, follow" />
+                <meta name="description" content="Technical Product & Program Management Leader with 15+ years of expertise in AI Product Management, GenAI, LLMs, and Fortune 500 digital transformations." />
+            </Helmet>
+            <div className="min-h-screen bg-background">
+                <Header />
 
-            {/* Page Title Section */}
-            <section className="bg-[#f4f4f4] pt-32 pb-12">
-                <div className="container">
-                    <h1 className="text-black text-3xl md:text-4xl font-bold">Work Experience</h1>
-                </div>
-            </section>
+                {/* Page Title Section */}
+                <section className="bg-[#f4f4f4] pt-32 pb-12">
+                    <div className="container">
+                        <h1 className="text-black text-3xl md:text-4xl font-bold">Work Experience</h1>
+                    </div>
+                </section>
 
-            {/* Main Content */}
-            <section className="py-16">
-                <div className="container">
-                    <div className="grid md:grid-cols-[200px_1fr] lg:grid-cols-[300px_1fr] gap-12">
-                        {/* Left Sidebar - Positions */}
-                        <div className="md:sticky md:top-28 md:self-start hidden md:block">
-                            <h3 className="text-primary text-xl font-bold mb-6">Positions</h3>
-                            <ul className="space-y-6">
-                                {positions.map((position) => (
-                                    <li key={position.id}>
-                                        <button
-                                            onClick={() => {
-                                                setActivePosition(position.id);
-                                                const element = document.getElementById(position.id);
-                                                if (element) {
-                                                    element.scrollIntoView({ behavior: "smooth", block: "start" });
-                                                }
-                                            }}
-                                            className={`text-sm lg:text-base text-left w-full transition-colors ${activePosition === position.id
-                                                ? "text-primary font-bold"
-                                                : "text-muted-foreground hover:text-foreground"
-                                                }`}
-                                        >
-                                            {position.title}
-                                        </button>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                {/* Main Content */}
+                <section className="py-16">
+                    <div className="container">
+                        <div className="grid md:grid-cols-[200px_1fr] lg:grid-cols-[300px_1fr] gap-12">
+                            {/* Left Sidebar - Positions */}
+                            <div className="md:sticky md:top-28 md:self-start hidden md:block">
+                                <h3 className="text-primary text-xl font-bold mb-6">Positions</h3>
+                                <ul className="space-y-6">
+                                    {positions.map((position) => (
+                                        <li key={position.id}>
+                                            <button
+                                                onClick={() => {
+                                                    setActivePosition(position.id);
+                                                    const element = document.getElementById(position.id);
+                                                    if (element) {
+                                                        element.scrollIntoView({ behavior: "smooth", block: "start" });
+                                                    }
+                                                }}
+                                                className={`text-sm lg:text-base text-left w-full transition-colors ${activePosition === position.id
+                                                    ? "text-primary font-bold"
+                                                    : "text-muted-foreground hover:text-foreground"
+                                                    }`}
+                                            >
+                                                {position.title}
+                                            </button>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
 
-                        {/* Right Content - Roles & Responsibilities */}
-                        <div>
-                            <h3 className="text-primary text-xl font-bold mb-8">Roles & Responsibilities</h3>
+                            {/* Right Content - Roles & Responsibilities */}
+                            <div>
+                                <h3 className="text-primary text-xl font-bold mb-8">Roles & Responsibilities</h3>
 
-                            <div className="space-y-12">
-                                {positions.map((job) => (
-                                    <div id={job.id} key={job.id} className="shadow-[0_4px_12px_0_rgba(0,0,0,0.078)] p-6 scroll-mt-32 rounded-xl">
-                                        {/* Company Logo and Title */}
-                                        <div className="flex items-center gap-3 mb-4">
-                                            <img src={job.logo} alt={job.company} className="object-contain" />
-                                            <h3 className="text-xl font-semibold text-primary">{job.company}</h3>
+                                <div className="space-y-12">
+                                    {positions.map((job) => (
+                                        <div id={job.id} key={job.id} className="shadow-[0_4px_12px_0_rgba(0,0,0,0.078)] p-6 scroll-mt-32 rounded-xl">
+                                            {/* Company Logo and Title */}
+                                            <div className="flex items-center gap-3 mb-4">
+                                                <img src={job.logo} alt={job.company} className="object-contain" />
+                                                <h3 className="text-xl font-semibold text-primary">{job.company}</h3>
+                                            </div>
+
+                                            <hr className="bg-[#ECECF1] my-6" />
+
+                                            {/* Role Title */}
+                                            <h4 className="text-base font-bold text-black mb-4">{job.title}</h4>
+
+                                            {/* Responsibilities */}
+                                            <div className="text-sm text-muted-foreground">
+                                                {job.responsibilities}
+                                            </div>
+
                                         </div>
-
-                                        <hr className="bg-[#ECECF1] my-6" />
-
-                                        {/* Role Title */}
-                                        <h4 className="text-base font-bold text-black mb-4">{job.title}</h4>
-
-                                        {/* Responsibilities */}
-                                        <div className="text-sm text-muted-foreground">
-                                        {job.responsibilities}
-                                        </div>
-
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* Fortune 500 Projects Section */}
-            <Fortune500Projects />
+                {/* Fortune 500 Projects Section */}
+                <Fortune500Projects />
 
-            <Footer />
-        </div>
+                <Footer />
+            </div>
+        </>
     );
 };
 

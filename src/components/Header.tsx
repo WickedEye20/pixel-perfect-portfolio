@@ -10,7 +10,7 @@ const Header = () => {
   const isHome = location.pathname === "/";
 
   const navLinks = [
-    { label: "Brief Info", path: "/", hash: "about" },
+    { label: "Brief Intro", path: "/", hash: "about" },
     { label: "Tech Skills", path: "/", hash: "skills" },
     { label: "Experience", path: "/", hash: "experience" },
     { label: "Projects", path: "/", hash: "projects" },

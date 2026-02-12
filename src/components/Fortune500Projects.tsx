@@ -13,10 +13,10 @@ const Fortune500Projects = () => {
   const companies = [
     { name: "JPMorgan", logo: jpm },
     { name: "Microsoft", logo: ms },
-    { name: "Lockheed Martin", logo: lm },
+    { name: "Walmart", logo: wm },
     { name: "ConEdison", logo: ce },
     { name: "Broadcom", logo: broadcom },
-    { name: "Walmart", logo: wm },
+    { name: "Lockheed Martin", logo: lm },
   ];
 
   return (

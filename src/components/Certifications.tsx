@@ -18,7 +18,7 @@ const Certifications = () => {
     { name: "DataCamp® Certified Data Scientist", icon: datacamp, bgColor: "bg-red-100" },
     { name: "SAFe® 6 Release Train Engineer", icon: rte, bgColor: "bg-orange-100" },
     { name: "SAFe® 6 Agile Product Manager", icon: apm, bgColor: "bg-orange-100" },
-    { name: "SAFe® 6 Product Manager", icon: popm, bgColor: "bg-yellow-100" },
+    { name: "SAFe® 6 Product Owner", icon: popm, bgColor: "bg-yellow-100" },
     { name: "SAFe® 6 Practice Consultant", icon: spc, bgColor: "bg-blue-100" },
     { name: "Change Management Practitioner", icon: prosci, bgColor: "bg-purple-100" },
     { name: "SAFe® 6 ScrumMaster", icon: ssm, bgColor: "bg-green-100" },
