@@ -5,35 +5,24 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useEffect, useState } from "react";
+
 const Education = () => {
-  const education = [
-    {
-      degree: (<>BS (Honors) <span className="block font-normal text-muted-foreground text-lg">in</span> Biomedical <br /> Engineering</>),
-      school: "University of Delhi",
-      details: "New Delhi, India",
-      icon: du,
-      bgColor: "bg-blue-600",
-    },
-    {
-      degree: (<>MTech <span className="block font-normal text-muted-foreground text-lg">in</span> Biomedical <br /> Engineering</>),
-      school: "Indian Institute of Technology Bombay",
-      details: "Mumbai, India",
-      icon: iit,
-      bgColor: "bg-orange-500",
-    },
-    {
-      degree: (<>MS <span className="block font-normal text-muted-foreground text-lg">in</span> Data Analytics <br /> Engineering</>),
-      school: "George Mason University",
-      details: "Virginia, USA",
-      icon: gmu,
-      bgColor: "bg-yellow-500",
-    },
-  ];
+  const [education, setEducation] = useState(null);
+
+  useEffect(() => {
+    fetch("/data/education.json")
+      .then((res) => res.json())
+      .then((json) => setEducation(json))
+      .catch((err) => console.error(err));
+  }, []);
+
+  if (!education) return null;
 
   return (
     <section id="education" className="gray-section py-10 md:py-28 scroll-mt-32">
       <div className="container text-center">
-        <h2 className="section-title text-foreground">Education</h2>
+        <h2 className="section-title text-foreground">{education.section_title}</h2>
 
         {/* 🔹 Mobile Swiper */}
         <div className="md:hidden">
@@ -43,13 +32,19 @@ const Education = () => {
             slidesPerView={1}
             pagination={{ clickable: true }}
           >
-            {education.map((edu, index) => (
+            {education.education_card.map((edu, index) => (
               <SwiperSlide key={index} className="pb-10 ">
                 <div key={index} className="">
                   <div className={`rounded-full mb-8`}>
-                    <img className="mx-auto" src={edu.icon} alt="" />
+                    <img className="mx-auto" src={edu.icon} alt={edu.school} />
                   </div>
-                  <h5 className="font-semibold text-foreground text-2xl mb-4">{edu.degree}</h5>
+                  <h5 className="font-semibold text-foreground text-2xl mb-4 max-w-[270px]">
+                    {edu.degree}
+                    <span className="block font-normal text-muted-foreground text-lg">
+                      in
+                    </span>
+                    {edu.field}
+                  </h5>
                   <p className="text-secondary text-sm font-medium">{edu.school}</p>
                   <p className="text-secondary text-xs mt-1">{edu.details}</p>
                 </div>
@@ -59,12 +54,18 @@ const Education = () => {
         </div>
 
         <div className="hidden md:grid md:grid-cols-3 gap-10 md:gap-6 justify-items-center">
-          {education.map((edu, index) => (
+          {education.education_card.map((edu, index) => (
             <div key={index} className="max-w-[350px]">
               <div className={`rounded-full mb-8`}>
-                <img className="mx-auto" src={edu.icon} alt="" />
+                <img className="mx-auto" src={edu.icon} alt={edu.school} />
               </div>
-              <h5 className="font-semibold text-foreground text-2xl mb-4">{edu.degree}</h5>
+              <h5 className="font-semibold text-foreground text-2xl mb-4 max-w-[270px]">
+                {edu.degree}
+                <span className="block font-normal text-muted-foreground text-lg">
+                  in
+                </span>
+                {edu.field}
+              </h5>
               <p className="text-secondary text-sm font-medium">{edu.school}</p>
               <p className="text-secondary text-xs mt-1">{edu.details}</p>
             </div>

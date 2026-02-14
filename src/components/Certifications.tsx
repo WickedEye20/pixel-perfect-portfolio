@@ -12,24 +12,24 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Certifications = () => {
-  const certifications = [
-    { name: "DataCamp® Certified Data Scientist", icon: datacamp, bgColor: "bg-red-100" },
-    { name: "SAFe® 6 Release Train Engineer", icon: rte, bgColor: "bg-orange-100" },
-    { name: "SAFe® 6 Agile Product Manager", icon: apm, bgColor: "bg-orange-100" },
-    { name: "SAFe® 6 Product Owner", icon: popm, bgColor: "bg-yellow-100" },
-    { name: "SAFe® 6 Practice Consultant", icon: spc, bgColor: "bg-blue-100" },
-    { name: "Change Management Practitioner", icon: prosci, bgColor: "bg-purple-100" },
-    { name: "SAFe® 6 ScrumMaster", icon: ssm, bgColor: "bg-green-100" },
-    { name: "Technical Product Manager", icon: phq, bgColor: "bg-green-100" },
-    { name: "Certified Sales Engineer ", icon: cse, bgColor: "bg-green-100" },
-  ];
+  const [certifications, setCertifications] = useState(null);
+
+  useEffect(() => {
+    fetch("/data/certifications.json")
+      .then((res) => res.json())
+      .then((json) => setCertifications(json))
+      .catch((err) => console.error(err));
+  }, []);
+
+  if (!certifications) return null;
 
   return (
     <section id="certifications" className="light-section py-10 md:py-28">
       <div className="container text-center">
-        <h2 className="section-title text-foreground">Certifications</h2>
+        <h2 className="section-title text-foreground">{certifications.section_title}</h2>
 
         {/* 🔹 Mobile Swiper */}
         <div className="md:hidden relative">
@@ -39,7 +39,7 @@ const Certifications = () => {
             slidesPerView={1}
             pagination={{ clickable: true }}
           >
-            {certifications.map((cert, index) => (
+            {certifications.certification_card.map((cert, index) => (
               <SwiperSlide key={index}>
                 <div key={index} className="cert-badge pb-12">
                   <div className={`rounded-lg flex items-center justify-center`}>
@@ -63,7 +63,7 @@ const Certifications = () => {
         </div>
 
         <div className="hidden md:grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
-          {certifications.map((cert, index) => (
+          {certifications.certification_card.map((cert, index) => (
             <div key={index} className="cert-badge">
               <div className={`rounded-lg flex items-center justify-center`}>
                 <img src={cert.icon} alt="" />

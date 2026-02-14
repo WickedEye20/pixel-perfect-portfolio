@@ -8,21 +8,24 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useEffect, useState } from "react";
 
 const Fortune500Projects = () => {
-  const companies = [
-    { name: "JPMorgan", logo: jpm },
-    { name: "Microsoft", logo: ms },
-    { name: "Walmart", logo: wm },
-    { name: "ConEdison", logo: ce },
-    { name: "Broadcom", logo: broadcom },
-    { name: "Lockheed Martin", logo: lm },
-  ];
+  const [companies, setCompanies] = useState(null);
+
+  useEffect(() => {
+    fetch("/data/fortune500.json")
+      .then((res) => res.json())
+      .then((json) => setCompanies(json))
+      .catch((err) => console.error(err));
+  }, []);
+
+  if (!companies) return null;
 
   return (
     <section id="projects" className="light-section py-10 md:py-28 scroll-mt-32">
       <div className="container text-center">
-        <h2 className="section-title text-foreground">Fortune 500 Projects</h2>
+        <h2 className="section-title text-foreground">{companies.section_title}</h2>
 
         {/* 🔹 Mobile Swiper */}
         <div className="md:hidden">
@@ -32,7 +35,7 @@ const Fortune500Projects = () => {
             slidesPerView={1}
             pagination={{ clickable: true }}
           >
-            {companies.map((company, index) => (
+            {companies.fortune_image.map((company, index) => (
               <SwiperSlide key={index} className="p-3 pb-10 ">
                 <div key={index} className="logo-card">
                   <div className="text-muted-foreground font-bold text-xs md:text-sm transition-opacity tracking-tight">
@@ -45,7 +48,7 @@ const Fortune500Projects = () => {
         </div>
 
         <div className="hidden md:grid grid-cols-3 md:grid-cols-3 xl:grid-cols-6 gap-5 items-center justify-items-center">
-          {companies.map((company, index) => (
+          {companies.fortune_image.map((company, index) => (
             <div key={index} className="logo-card">
               <div className="text-muted-foreground font-bold text-xs md:text-sm transition-opacity tracking-tight">
                 <img src={company.logo} alt="" />

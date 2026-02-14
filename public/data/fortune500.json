@@ -1,0 +1,29 @@
+{
+  "section_title": "Fortune 500 Projects",
+  "fortune_image": [
+    {
+      "name": "JPMorgan",
+      "logo": "/assets/projects/jpm.png"
+    },
+    {
+      "name": "Microsoft",
+      "logo": "/assets/projects/ms.png"
+    },
+    {
+      "name": "Walmart",
+      "logo": "/assets/projects/wm.png"
+    },
+    {
+      "name": "ConEdison",
+      "logo": "/assets/projects/ce.png"
+    },
+    {
+      "name": "Broadcom",
+      "logo": "/assets/projects/broadcom.png"
+    },
+    {
+      "name": "Lockheed Martin",
+      "logo": "/assets/projects/lm.png"
+    }
+  ]
+}

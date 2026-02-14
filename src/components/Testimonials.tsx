@@ -7,31 +7,20 @@ import testimony_avatar_1 from "../assets/testimonials/avatar_1.png";
 import testimony_avatar_2 from "../assets/testimonials/avatar_2.png";
 import testimony_avatar_3 from "../assets/testimonials/avatar_3.png";
 
-import { useState } from "react";
-
-const testimonials = [
-  {
-    text: `Abhishek worked with me as an intern in my Advanced Semiconductor Materials, Nanostructures & Devices Lab at IIT Delhi. He worked on fabrication and characterization of Nanoscale biosensors. He is a hardworking, focused and ambitious professional.`,
-    name: "Dr. Rajendra Singh, Associate Professor",
-    role: "Department of Physics, Indian Institute of Technology, New Delhi",
-    image: testimony_avatar_1,
-  },
-  {
-    text: `Abhi worked very well with 3rd party vendors, clients, and project stakeholders during his tenure. He is exceptional in technical enablement and onboarding of clients with minimal turnaround time. He also focused on onboarding teams to initiate development and eventually scaled them to production. He has a technical background that allowed him to develop deep product knowledge with a short learning curve. His technical skill set in cloud services, Data Science, AI, MLOps combined with Program Management, and software delivery makes him a good fit for technical program management and project leadership roles`,
-    name: "S Venkataraman, Senior VP",
-    role: "Deloitte Consulting US",
-    image: testimony_avatar_2,
-  },
-  {
-    text: `He is an adaptive learner and an affable team player. I wish him success in his future endeavors.`,
-    name: "Mike D, Associate VP",
-    role: "Deloitte Consulting US",
-    image: testimony_avatar_3,
-  },
-];
+import { useState, useEffect } from "react";
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [testimonials, setTestimonials] = useState(null);
+
+  useEffect(() => {
+    fetch("/data/testimonials.json")
+      .then((res) => res.json())
+      .then((json) => setTestimonials(json))
+      .catch((err) => console.error(err));
+  }, []);
+
+  if (!testimonials) return null;
 
   return (
     <section
@@ -43,7 +32,7 @@ const Testimonials = () => {
         {/* LEFT – TEXT */}
         <div className="flex-1 container py-10 min-w-0">
           <h2 className="section-title text-foreground mb-8 text-center">
-            Testimonials
+            {testimonials.section_title}
           </h2>
 
           <Swiper
@@ -56,7 +45,7 @@ const Testimonials = () => {
             spaceBetween={0}
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           >
-            {testimonials.map((item, index) => (
+            {testimonials.testimonial_card.map((item, index) => (
               <SwiperSlide key={index}>
                 <p className="text-black text-xl lg:text-2xl italic text-center">
                   "{item.text}"
@@ -80,15 +69,15 @@ const Testimonials = () => {
               <img
                 width={90}
                 height={90}
-                src={testimonials[activeIndex].image}
-                alt={testimonials[activeIndex].name}
+                src={testimonials.testimonial_card[activeIndex]?.image}
+                alt={testimonials.testimonial_card[activeIndex]?.name}
                 className="mx-auto rounded-full"
               />
               <h6 className="text-lg text-white mt-4">
-                {testimonials[activeIndex].name}
+                {testimonials.testimonial_card[activeIndex]?.name}
               </h6>
               <p className="text-white text-sm">
-                {testimonials[activeIndex].role}
+                {testimonials.testimonial_card[activeIndex]?.role}
               </p>
             </div>
 

@@ -1,0 +1,24 @@
+{
+  "section_title": "Testimonials",
+  "testimonial_card": [
+  {
+    "text": "Abhishek worked with me as an intern in my Advanced Semiconductor Materials, Nanostructures & Devices Lab at IIT Delhi. He worked on fabrication and characterization of Nanoscale biosensors. He is a hardworking, focused and ambitious research professional.",
+    "name": "Dr. Rajendra Singh, Associate Professor",
+    "role": "Department of Physics, Indian Institute of Technology, New Delhi",
+    "image": "/assets/testimonials/avatar_1.png"
+  },
+  {
+    "text": "Abhi worked very well with 3rd party vendors, clients, and project stakeholders during his tenure. He is exceptional in technical enablement and onboarding of clients with minimal turnaround time. He also focused on onboarding teams to initiate development and eventually scaled them to production. He has a technical background that allowed him to develop deep product knowledge with a short learning curve. His technical skill set in cloud services, Data Science, AI, MLOps combined with Program Management, and software delivery makes him a good fit for technical program management and project leadership roles.",
+    "name": "S Venkataraman, Senior VP",
+    "role": "Deloitte Consulting US",
+    "image": "/assets/testimonials/avatar_2.png"
+  },
+  {
+    "text": "He is an adaptive learner and an affable team player. I wish him success in his future endeavors.",
+    "name": "Mike D, Associate VP",
+    "role": "Deloitte Consulting US",
+    "image": "/assets/testimonials/avatar_3.png"
+  }
+]
+
+}

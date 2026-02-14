@@ -1,0 +1,26 @@
+{
+  "section_title": "Education",
+  "education_card": [
+    {
+      "degree": "BS (Honors)",
+      "field": "Biomedical Engineering",
+      "school": "University of Delhi",
+      "details": "New Delhi, India",
+      "icon": "/assets/education/du.png"
+    },
+    {
+      "degree": "MTech",
+      "field": "Biomedical Engineering",
+      "school": "Indian Institute of Technology Bombay",
+      "details": "Mumbai, India",
+      "icon": "/assets/education/iit.png"
+    },
+    {
+      "degree": "MS",
+      "field": "Data Analytics Engineering",
+      "school": "George Mason University",
+      "details": "Virginia, USA",
+      "icon": "/assets/education/gmu.png"
+    }
+  ]
+}

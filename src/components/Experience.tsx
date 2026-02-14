@@ -26,11 +26,11 @@ const Experience = () => {
   }, []);
 
   if (!experiences) return null;
-  
+
   return (
     <section id="experience" className="gray-section py-10 md:py-24 scroll-mt-32">
       <div className="container text-center">
-        <h2 className="section-title">Experience</h2>
+        <h2 className="section-title">{experiences.section_title}</h2>
 
         {/* 🔹 Mobile Swiper */}
         <div className="md:hidden">
