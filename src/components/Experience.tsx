@@ -11,76 +11,22 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useEffect, useState } from "react";
 
 
 const Experience = () => {
-  const experiences = [
-    {
-      company: "Sam's Club",
-      role: "Sr. Technical Product Adviser - CX, GTM & Sales Enablement",
-      period: "PRESENT",
-      logo: sams_club,
-      bgColor: "bg-yellow-400",
-      slug: "sams-club",
-    },
-    {
-      company: "Waltcorp",
-      role: "Sr. AI Product Manager - GTM & Sales Enablement",
-      period: "PREVIOUS",
-      logo: waltcorp,
-      bgColor: "bg-pink-500",
-      slug: "waltcorp",
-    },
-    {
-      company: "Deloitte",
-      role: "Global Engagement & Product Training Lead",
-      period: "PREVIOUS",
-      logo: deloitte,
-      bgColor: "bg-black",
-      slug: "deloitte",
-    },
-    {
-      company: "Certimap",
-      role: "Technical Product Manager - GTM & Sales Enablement",
-      period: "PREVIOUS",
-      logo: certimap,
-      bgColor: "bg-red-600",
-      slug: "certimap",
-    },
-    {
-      company: "CGI",
-      role: "Senior Consultant - OCM, Curriculum & Product Adoption",
-      period: "PREVIOUS",
-      logo: cgi,
-      bgColor: "bg-blue-700",
-      slug: "cgi",
-    },
-    {
-      company: "Lockheed Martin",
-      role: "Machine Learning Engineer",
-      period: "PREVIOUS",
-      logo: lm,
-      bgColor: "bg-gray-700",
-      slug: "lm",
-    },
-    {
-      company: "George Mason University",
-      role: "Web Developer & Trainer",
-      period: "PREVIOUS",
-      logo: gmu,
-      bgColor: "bg-red-600",
-      slug: "gmu",
-    },
-    {
-      company: "Vidyatech Solutions",
-      role: "Technical Curriculum Developer",
-      period: "PREVIOUS",
-      logo: vts,
-      bgColor: "bg-blue-600",
-      slug: "vts",
-    },
-  ];
 
+  const [experiences, setExperiences] = useState(null);
+
+  useEffect(() => {
+    fetch("/data/experiences.json")
+      .then((res) => res.json())
+      .then((json) => setExperiences(json))
+      .catch((err) => console.error(err));
+  }, []);
+
+  if (!experiences) return null;
+  
   return (
     <section id="experience" className="gray-section py-10 md:py-24 scroll-mt-32">
       <div className="container text-center">
@@ -94,7 +40,7 @@ const Experience = () => {
             slidesPerView={1}
             pagination={{ clickable: true }}
           >
-            {experiences.map((exp, index) => (
+            {experiences.experience_card.map((exp, index) => (
               <SwiperSlide key={index} className="p-3 pb-10 ">
                 <div key={index} className="experience-card">
                   <div className="flex flex-col items-center gap-4 h-full">
@@ -119,7 +65,7 @@ const Experience = () => {
         </div>
 
         <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
-          {experiences.map((exp, index) => (
+          {experiences.experience_card.map((exp, index) => (
             <div key={index} className="experience-card">
               <div className="flex flex-col items-center gap-4 h-full">
                 <div className={`min-h-[130px] md:min-h-[160px] flex items-center justify-center flex-shrink-0 text-white font-bold text-xs`}>

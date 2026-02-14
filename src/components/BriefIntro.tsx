@@ -1,35 +1,41 @@
 import { Linkedin } from "lucide-react";
-import abhi_img from "../assets/abhi_m_image.png";
+// import abhi_img from "../assets/abhi_m_image.png";
+import { useEffect, useState } from "react";
+
 const BriefIntro = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("/data/briefIntro.json")
+      .then((res) => res.json())
+      .then((json) => setData(json))
+      .catch((err) => console.error(err));
+  }, []);
+
+  if (!data) return null;
   return (
     <section id="about" className="gray-section scroll-mt-32">
       <div className="flex flex-col md:flex-row items-stretch">
         <div className="flex-shrink-0 p-16 lg:p-28 primary_gradient w-full md:w-auto flex items-center">
           <img
-            src={abhi_img}
-            alt="Abhishek Misra"
+            src={data.image}
+            alt={data.image_alt}
             className="m-auto w-48 h-48 lg:w-[250px] lg:h-[250px] object-cover rounded-full"
           />
         </div>
 
         <div className="flex-1 px-[4vw] py-10 md:py-24 md:px-16 lg:px-24 flex flex-col justify-center text-center md:text-left">
-          <h2 className="section-title text-foreground mb-5">Brief Intro</h2>
+          <h2 className="section-title text-foreground mb-5">{data.section_title}</h2>
           <div className="text-secondary text-base font-medium grid gap-4">
-            <p>
-              <b className="block text-black">Technical Program Management & Enterprise Delivery</b>
-              Technical Program Manager with 7+ years of experience leading large, cross-functional engineering, product, and business teams to deliver cloud-native enterprise platforms across AWS, GCP, and Azure. Proven track record owning end-to-end program execution, including roadmap planning, dependency management, risk mitigation, and delivery against cost, schedule, and quality targets. Experienced in operating at scale within complex enterprise environments while aligning execution to business objectives and enterprise architecture.
-            </p>
-            <p>
-              <b className="block text-black">AI / ML Product & Platform Management</b>
-              Hands-on experience delivering production-grade ML pipelines, partnering with data science, engineering, and platform teams to translate customer and business problems into scalable AI solutions. Led AI use-case definition, rapid prototyping, and PoC-to-production transitions, with accountability for product requirements, prioritization, and delivery outcomes. Strong at balancing technical depth and product judgment, ensuring AI initiatives drive measurable impact beyond experimentation.
-            </p>
-            <p>
-              <b className="block text-black">GTM, Pre-Sales & Enterprise Adoption (Scaled Agile)</b>
-              10+ years of experience supporting GTM strategy, pre-sales, and enterprise adoption for cloud, AI, and EdTech products, including engagements with multiple Fortune 500 customers. Partnered closely with sales, leadership, and delivery teams on solution positioning, technical enablement, and customer onboarding to drive adoption and long-term value. SAFe® 6-certified Agile Product Manager and Practice Consultant, experienced in scaled agile execution, product lifecycle management, and organizational change.
-            </p>
+            {data.sections.map((section, index) => (
+              <p key={index}>
+                <b className="block text-black">{section.title}</b>
+                {section.content}
+              </p>
+            ))}
           </div>
           <div className="mt-4">
-            <a href="https://www.linkedin.com/in/abhishekmishra11/" target="_blank" className="inline-block">
+            <a href={data.linkedin} target="_blank" className="inline-block">
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 25" fill="none">
                 <g clip-path="url(#clip0_181_198)">
                   <path d="M28.2874 19.9989H27.9906V19.4111H28.3663C28.5618 19.4111 28.7827 19.4423 28.7827 19.6911C28.7827 19.9759 28.5598 19.9989 28.2874 19.9989ZM28.5826 20.1739C28.8825 20.1381 29.04 19.9759 29.04 19.7045C29.04 19.3737 28.8342 19.2129 28.4127 19.2129H27.7363V20.9539H27.9906V20.1957H28.3053L28.3114 20.205L28.8009 20.9539H29.0726L28.5485 20.1787L28.5826 20.1739Z" fill="#231F20" />

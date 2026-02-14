@@ -65,7 +65,7 @@ const Contact = () => {
               <textarea
                 id="ct_message"
                 name="message"
-                placeholder="Leave us a message..."
+                placeholder="Leave me a message..."
                 value={formData.message}
                 onChange={handleChange}
                 rows={3}

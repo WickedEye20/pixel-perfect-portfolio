@@ -1,0 +1,53 @@
+{
+  "section_title": "Experience",
+  "experience_card": [
+    {
+      "company": "Sam's Club",
+      "role": "Sr. Technical Product Adviser - CX, GTM & Sales Enablement",
+      "logo": "/assets/exp/sams_club.png",
+      "slug": "sams-club"
+    },
+    {
+      "company": "Waltcorp",
+      "role": "Sr. AI Product Manager - GTM & Sales Enablement",
+      "logo": "/assets/exp/waltcorp.png",
+      "slug": "waltcorp"
+    },
+    {
+      "company": "Deloitte",
+      "role": "Global Engagement & Product Training Lead",
+      "logo": "/assets/exp/deloitte.png",
+      "slug": "deloitte"
+    },
+    {
+      "company": "Certimap",
+      "role": "Technical Product Manager - GTM & Sales Enablement",
+      "logo": "/assets/exp/certimap.png",
+      "slug": "certimap"
+    },
+    {
+      "company": "CGI",
+      "role": "Senior Consultant - OCM, Curriculum & Product Adoption",
+      "logo": "/assets/exp/cgi.png",
+      "slug": "cgi"
+    },
+    {
+      "company": "Lockheed Martin",
+      "role": "Machine Learning Engineer",
+      "logo": "/assets/exp/lm.png",
+      "slug": "lm"
+    },
+    {
+      "company": "George Mason University",
+      "role": "Web Developer & Trainer",
+      "logo": "/assets/exp/gmu.png",
+      "slug": "gmu"
+    },
+    {
+      "company": "Vidyatech Solutions",
+      "role": "Technical Curriculum Developer",
+      "logo": "/assets/exp/vts.png",
+      "slug": "vts"
+    }
+  ]
+}

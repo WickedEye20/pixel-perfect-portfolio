@@ -11,13 +11,13 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    text: `Abhishek worked with me as an intern in my Advanced Semiconductor Materials, Nanostructures & Devices Lab at IIT Delhi. He worked on fabrication and characterization of Nanoscale biosensors. He is a hardworking, focused and ambitious student.`,
+    text: `Abhishek worked with me as an intern in my Advanced Semiconductor Materials, Nanostructures & Devices Lab at IIT Delhi. He worked on fabrication and characterization of Nanoscale biosensors. He is a hardworking, focused and ambitious professional.`,
     name: "Dr. Rajendra Singh, Associate Professor",
     role: "Department of Physics, Indian Institute of Technology, New Delhi",
     image: testimony_avatar_1,
   },
   {
-    text: `Abhi worked very well with 3rd party vendors, clients, and project stakeholders during his tenure. He is exceptional in technical enablement and onboarding of clients with minimal turnaround time. He also focused on onboarding teams to initiate development and eventually scaled them to production . He has a technical background that allowed him develop deep product knowledge with a short learning curve. His technical skill set in cloud services, Data Science, AI, MLOPs combined with Program Management, and software delivery makes him good fit for technical program management and project leadership roles`,
+    text: `Abhi worked very well with 3rd party vendors, clients, and project stakeholders during his tenure. He is exceptional in technical enablement and onboarding of clients with minimal turnaround time. He also focused on onboarding teams to initiate development and eventually scaled them to production. He has a technical background that allowed him to develop deep product knowledge with a short learning curve. His technical skill set in cloud services, Data Science, AI, MLOps combined with Program Management, and software delivery makes him a good fit for technical program management and project leadership roles`,
     name: "S Venkataraman, Senior VP",
     role: "Deloitte Consulting US",
     image: testimony_avatar_2,
