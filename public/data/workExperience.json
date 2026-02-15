@@ -1,0 +1,113 @@
+{
+  "page_title": "Work Experience",
+  "position_data": [
+    {
+      "id": "sams_club",
+      "title": "Sr. Technical Product Adviser (Fractional) - GTM & Sales Enablement",
+      "company": "Sam's Club",
+      "logo": "/assets/work_exp/sams_club.png",
+      "intro": "",
+      "responsibilities": [
+        "Optimizing vendor partnerships with 5 key suppliers, ensuring timely delivery and contract compliance.",
+        "Streamlining product sales processes to improve client satisfaction (CRM) and accelerate revenue growth.",
+        "Controlling inventory operations to maintain accurate stock levels and timely replenishment, improving availability and reducing shortages."
+      ]
+    },
+    {
+      "id": "waltcorp",
+      "title": "Sr. AI Product Manager - GTM & Sales Enablement",
+      "company": "Waltcorp",
+      "logo": "/assets/work_exp/waltcorp.png",
+      "intro": "",
+      "responsibilities": [
+        "Led environment migration from GCP to AWS, optimizing resources, ensuring seamless test-to-production application deployment",
+        "Led technical pre-sales including delivering solution demos, developing proof-of-concepts (PoCs), and conducted technical workshops",
+        "Optimized Amazon CloudFront and Route 53 services of the learning management system LMS backend to stream low latency HD video content",
+        "Enabled sales and business development teams and processes to generate and convert leads into profitable clients"
+      ]
+    },
+    {
+      "id": "deloitte",
+      "title": "Global Engagement & Product Training Lead",
+      "company": "Deloitte Consulting",
+      "logo": "/assets/work_exp/deloitte.png",
+      "intro": "Led and managed a cross-continent Engagement, Training & Adoption program focusing on technical enablement of 10+ Fortune 500 client teams",
+      "responsibilities": [
+        "Strategized and steered global Skill & Certification Management initiative for imparting AI, ML, NLP, MLOps and ML Engineering training customized to meet the persona-specific organizational development needs",
+        "Engineered MLOps, NLP use cases and curriculum to nurture existing client relationships, attract prospective customers and build sales pipelines",
+        "Advised and engaged critical clients and vendors on how to efficiently leverage organic IP/ platform for maximizing their profitability",
+        "Trained and enabled engineering, pre-sales, customer success and MarCom teams on product technicalities and onboarded 1000+ professionals"
+      ]
+    },
+    {
+      "id": "certimap",
+      "title": "Technical Product Manager - GTM & Pre-Sales Enablement",
+      "company": "Certimap",
+      "logo": "/assets/work_exp/certimap.png",
+      "intro": "Managed, mentored, and guided five scrum teams to develop and deliver software (LMS), curriculum, and e-learning products for a cloud-based SaaS business aligned to the enterprise product strategy and organizational vision",
+      "responsibilities": [
+        "Acted as the lead product owner and architected end-to-end system (LMS), including frontend, backend, DB, microservices, and deployment infrastructure",
+        "Liaised with sponsors, change leaders, change champions, power users and defined business product roadmap, and transformation goals",
+        "Optimized Amazon CloudFront and Route 53 services of the learning management system LMS backend to stream low latency HD video content",
+        "Oversaw the technical architecture and AI Solution engineering through the entire project/product lifecycle to ensure the health of project KPIs and OKRs",
+        "Partnered closely with engineering and DevOps teams to create user roles and security groups for identity and access management (IAM) of premium and free users of the product",
+        "Developed and implemented a detailed and well-differentiated go-to-market (GTM) strategy and positioned e-learning products strategically",
+        "Enabled pre-sales and business development teams generate and convert leads worth USD 200,000 in a span of 12 months and achieve sustained product adoption"
+      ]
+    },
+    {
+      "id": "cgi",
+      "title": "Senior Consultant - OCM, Curriculum & Product Adoption",
+      "company": "CGI",
+      "logo": "/assets/work_exp/cgi.png",
+      "intro": "Developed, designed, delivered systems training on advanced digital systems being integrated with client operations on a large scale digital transformation and organizational change management project.",
+      "responsibilities": [
+        "Designed, developed, and deployed engaging e-learning courses on ARM (a CGI patented SaaS application) using Articulate 360, Vyond and SharePoint.",
+        "Collected, processed, and transformed users' psychometric and learning performance data based on strategically designed exit surveys, end of class questionnaire and pop-up quizzes for 500+ classroom learners.",
+        "Defined metrics, collected strategic KPI data to measure effectiveness of systems integration, technical training, communication and share useful insights with development, testing and OCM teams.",
+        "Developed Tableau dashboards as decision support systems for decision making for effectiveness enhancement initiatives by training implementation team.",
+        "Trained & consulted client employees through deployment of ARM packages to manage gas and electric assets to adapt through digital transformation for effective management of assets installed in NYC.",
+        "Spearheaded data driven change adoption analytics by developing rich dashboards in Tableau to report effectiveness of digital change adoption at Con Edison on a multi-million-dollar Digital Transformation project."
+      ]
+    },
+    {
+      "id": "lm",
+      "title": "Machine Learning Engineer",
+      "company": "Lockheed Martin",
+      "logo": "/assets/work_exp/lm.png",
+      "intro": "The project was sponsored by Lockheed Martin to Systems Engineering and Operations Research Department of Volgenau School of Engineering, GMU. The research was conducted in collaboration with Lockheed Martin experts and graduate students of Volgenau School of Engineering.",
+      "responsibilities": [
+        "Modelled a decision support system (DSS) in collaboration with Lockheed Martin experts using Machine Learning on AIS/ GPS data (5 million entries) availed from Global Fishing Watch and Planet Labs. The DSS can assist law enforcement in identification and tracking of vessels conducting illegal fishing.",
+        "Trained Generalised Linear Model (GLM) with gradient boosting which gave a Gini index of 0.955.",
+        "Used Monte Carlo simulation to predict the path of the vessel once intercepted in the restricted area.",
+        "Tested other models like Random Forest on the AIS/GPS data to enhance the accuracy of prediction of illegal fishing activity."
+      ]
+    },
+    {
+      "id": "gmu",
+      "title": "Web Developer & Trainer",
+      "company": "Volgenau School of Engineering, George Mason University",
+      "logo": "/assets/work_exp/gmu.png",
+      "intro": "Responsive Web Design(RWD) has become an ineluctable need for any industry. RWD is enabled by dexterous use of technologies like CSS, HTML5, JavaScript etc. Animation and Motion Graphics are at the soul of Rich Internet Applications(RIAs). I worked as a Graduate Teaching Assistant for courses IT 123, Multimedia & Web Design and IT 315, Mobile Application Development (Swift for iOS). As a Graduate Teaching Assistant at Volgenau School of Engineering, George Mason University, my responsibilities were as follows:",
+      "responsibilities": [
+        "Taught and graded undergraduate students of Computer Science and IT in Responsive Web Design(RWD)",
+        "Developed technical curriculum for SWIFT, Obj C, Web Design etc. Interacted with students via online and in person help sessions to resolve their technical queries.",
+        "Conducted quizzes, formative and summative exams to evaluate the learning effectiveness."
+      ]
+    },
+    {
+      "id": "vts",
+      "title": "Technical Curriculum Developer",
+      "company": "Vidyatech Solutions",
+      "logo": "/assets/work_exp/vts.png",
+      "intro": "Vidyatech, a company led and managed by IIT-IIM alumni, builds world class cloud based solutions in the areas of Content Technology, CMS, SharePoint Applications, Data & Web Analytics, Mobility, Cyber Security, IT infrastructure, Application Development, IOT and provides Managed Services for global giants like Microsoft, Symantec, Pearson, Thomson Reuters, NIIT, Wipro to name a few. Key highlights of projects I undertook as an Senior Consultant - Instructional Design at Vidyatech, include the following:",
+      "responsibilities": [
+        "Developed ILT and WBT modules for Fortune 500 giants like Symantec, Microsoft Corporation using advanced principles of Instructional Design.",
+        "Authored market research report on 'Global Analytics Market'.",
+        "Reviewed content on Cyber Security developed by SMEs (Subject Matter Experts).",
+        "Designed and storyboarded problem, game, scenario based learning.",
+        "Wrote technical modules on Cyber Security for Students and Trainers."
+      ]
+    }
+  ]
+}
