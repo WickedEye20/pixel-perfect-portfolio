@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useHeroAnimation } from "@/hooks/useGsapAnimation";
 
 const HeroSection = () => {
-
+  const heroRef = useRef<HTMLElement>(null);
   const [banner, setBanner] = useState(null);
 
   useEffect(() => {
@@ -11,11 +12,12 @@ const HeroSection = () => {
       .catch((err) => console.error(err));
   }, []);
 
+  useHeroAnimation(heroRef, [banner]);
+
   if (!banner) return null;
 
-
   return (
-    <section className="hero-section py-28 md:py-32 lg:py-48">
+    <section ref={heroRef} className="hero-section py-28 md:py-32 lg:py-48">
       <div className="container mx-auto text-white text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
           {banner.section_title}

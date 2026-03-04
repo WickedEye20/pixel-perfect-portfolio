@@ -1,9 +1,12 @@
 import { Linkedin } from "lucide-react";
 // import abhi_img from "../assets/abhi_m_image.png";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useGsapAnimation } from "@/hooks/useGsapAnimation";
 
 const BriefIntro = () => {
+  const sectionRef = useRef<HTMLElement>(null);
   const [data, setData] = useState(null);
+  useGsapAnimation(sectionRef, [data]);
 
   useEffect(() => {
     fetch("/data/briefIntro.json")
@@ -14,9 +17,9 @@ const BriefIntro = () => {
 
   if (!data) return null;
   return (
-    <section id="about" className="gray-section scroll-mt-32">
+    <section ref={sectionRef} id="about" className="gray-section scroll-mt-32">
       <div className="flex flex-col md:flex-row items-stretch">
-        <div className="flex-shrink-0 p-16 lg:p-28 primary_gradient w-full md:w-auto flex items-center">
+        <div className="gsap-fade-up flex-shrink-0 p-16 lg:p-28 primary_gradient w-full md:w-auto flex items-center">
           <img
             src={data.image}
             alt={data.image_alt}
@@ -26,7 +29,7 @@ const BriefIntro = () => {
 
         <div className="flex-1 px-[4vw] py-10 md:py-24 md:px-16 lg:px-24 flex flex-col justify-center text-center md:text-left">
           <h2 className="section-title text-foreground mb-5">{data.section_title}</h2>
-          <div className="text-secondary text-base font-medium grid gap-4">
+          <div className="gsap-stagger text-secondary text-base font-medium grid gap-4">
             {data.sections.map((section, index) => (
               <p key={index}>
                 <b className="block text-black">{section.title}</b>

@@ -9,10 +9,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useGsapAnimation } from "@/hooks/useGsapAnimation";
 
 const TechSkills = () => {
+  const sectionRef = useRef<HTMLElement>(null);
   const [skills, setSkills] = useState(null);
+  useGsapAnimation(sectionRef, [skills]);
 
   useEffect(() => {
     fetch("/data/techSkills.json")
@@ -24,7 +27,7 @@ const TechSkills = () => {
   if (!skills) return null;
 
   return (
-    <section id="skills" className="py-10 md:py-24 scroll-mt-32">
+    <section ref={sectionRef} id="skills" className="py-10 md:py-24 scroll-mt-32">
       <div className="container text-center">
         <h2 className="section-title text-foreground">{skills.section_title}</h2>
 
@@ -45,8 +48,8 @@ const TechSkills = () => {
                       {skill.title}
                     </h5>
                   </div>
-                  <p className="text-muted-foreground text-base">
-                    {skill.description}
+                  <p className="text-muted-foreground text-base" dangerouslySetInnerHTML={{ __html: skill.description }}>
+                    
                   </p>
                 </div>
               </SwiperSlide>
@@ -54,15 +57,15 @@ const TechSkills = () => {
           </Swiper>
         </div>
 
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="gsap-stagger hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.section_card.map((skill, index) => (
             <div key={index} className="skill-card">
               <div className="flex flex-col gap-3 mb-4">
                 <img src={skill.icon} className="w-20 h-20 mx-auto" />
                 <h5 className="font-semibold text-foreground">{skill.title}</h5>
               </div>
-              <p className="text-muted-foreground text-base mb-6">
-                {skill.description}
+              <p className="text-muted-foreground text-base mb-6" dangerouslySetInnerHTML={{ __html: skill.description }}>
+                
               </p>
             </div>
           ))}

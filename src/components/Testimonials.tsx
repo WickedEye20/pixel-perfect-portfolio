@@ -7,11 +7,14 @@ import testimony_avatar_1 from "../assets/testimonials/avatar_1.png";
 import testimony_avatar_2 from "../assets/testimonials/avatar_2.png";
 import testimony_avatar_3 from "../assets/testimonials/avatar_3.png";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useGsapAnimation } from "@/hooks/useGsapAnimation";
 
 const Testimonials = () => {
+  const sectionRef = useRef<HTMLElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [testimonials, setTestimonials] = useState(null);
+  useGsapAnimation(sectionRef, [testimonials]);
 
   useEffect(() => {
     fetch("/data/testimonials.json")
@@ -24,13 +27,14 @@ const Testimonials = () => {
 
   return (
     <section
+      ref={sectionRef}
       id="testimonials"
       className="gray-section py-10 md:py-0 scroll-mt-32"
     >
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] items-center">
 
         {/* LEFT – TEXT */}
-        <div className="flex-1 container py-10 min-w-0">
+        <div className="gsap-fade-up flex-1 container py-10 min-w-0">
           <h2 className="section-title text-foreground mb-8 text-center">
             {testimonials.section_title}
           </h2>

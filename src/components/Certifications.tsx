@@ -12,10 +12,13 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useGsapAnimation } from "@/hooks/useGsapAnimation";
 
 const Certifications = () => {
+  const sectionRef = useRef<HTMLElement>(null);
   const [certifications, setCertifications] = useState(null);
+  useGsapAnimation(sectionRef, [certifications]);
 
   useEffect(() => {
     fetch("/data/certifications.json")
@@ -27,7 +30,7 @@ const Certifications = () => {
   if (!certifications) return null;
 
   return (
-    <section id="certifications" className="light-section py-10 md:py-28">
+    <section ref={sectionRef} id="certifications" className="light-section py-10 md:py-28">
       <div className="container text-center">
         <h2 className="section-title text-foreground">{certifications.section_title}</h2>
 
@@ -62,7 +65,7 @@ const Certifications = () => {
           </div> */}
         </div>
 
-        <div className="hidden md:grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+        <div className="gsap-stagger hidden md:grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
           {certifications.certification_card.map((cert, index) => (
             <div key={index} className="cert-badge">
               <div className={`rounded-lg flex items-center justify-center`}>

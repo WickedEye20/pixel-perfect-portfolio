@@ -8,6 +8,8 @@ import Education from "@/components/Education";
 import Certifications from "@/components/Certifications";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
+import Contact2 from "@/components/Contact2";
+
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -53,7 +55,7 @@ const Index = () => {
         <Education />
         <Certifications />
         <Testimonials />
-        <Contact />
+        <Contact2 />
         <Footer />
       </div>
     </>

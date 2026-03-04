@@ -1,17 +1,18 @@
 import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import { toast } from "@/components/ui/use-toast";
 
 const Contact2 = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
     message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
+  // ✅ Handle input change
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -21,26 +22,44 @@ const Contact2 = () => {
     });
   };
 
+  // ✅ Silent validation (NO TOAST)
+  const validateForm = () => {
+    if (!formData.name.trim()) return false;
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) return false;
+
+    return true;
+  };
+
+  // ✅ Submit
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // stop if invalid (browser required fields already help)
+    if (!validateForm()) return;
 
     if (!recaptchaRef.current) return;
 
     setIsSubmitting(true);
 
     try {
-      // 1️⃣ Execute invisible reCAPTCHA
+      // 🔐 Execute captcha
       const token = await recaptchaRef.current.executeAsync();
 
       if (!token) {
-        alert("reCAPTCHA verification failed");
+        toast({
+          title: "Verification failed",
+          description: "Captcha verification failed.",
+          variant: "destructive",
+        });
         setIsSubmitting(false);
         return;
       }
 
-      // 2️⃣ Send form data to Google Apps Script
+      // 📡 Send data
       await fetch(
-        "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec",
+        "https://script.google.com/macros/s/AKfycbxIkyWJt2Gt3R_WqpdOZEnlKHuGVCCNm-j0bHHfMNVTCkcrB_ZfltiepFq5CHUUjFXM7Q/exec",
         {
           method: "POST",
           headers: {
@@ -54,18 +73,26 @@ const Contact2 = () => {
         }
       );
 
-      console.log("Form submitted:", formData);
+      // ✅ SUCCESS TOAST ONLY HERE
+      toast({
+        title: "Form Submitted",
+        description: "Your form has been submitted successfully.",
+      });
 
-      // 3️⃣ Reset form
       setFormData({
         name: "",
         email: "",
-        phone: "",
         message: "",
       });
 
     } catch (error) {
-      console.error("Submission error:", error);
+      console.error(error);
+
+      toast({
+        title: "Submission failed",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
     } finally {
       recaptchaRef.current.reset();
       setIsSubmitting(false);
@@ -120,14 +147,13 @@ const Contact2 = () => {
                 onChange={handleChange}
                 rows={3}
                 className="input-field resize-none text-sm"
-                required
               />
             </div>
 
             {/* Invisible reCAPTCHA */}
             <ReCAPTCHA
               ref={recaptchaRef}
-              sitekey="YOUR_RECAPTCHA_SITE_KEY"
+              sitekey="6LfEhmwsAAAAAJs6sZQqv--2Jb0a4nw1VcARhTyA"
               size="invisible"
             />
 

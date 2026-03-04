@@ -11,12 +11,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useGsapAnimation } from "@/hooks/useGsapAnimation";
 
 
 const Experience = () => {
-
+  const sectionRef = useRef<HTMLElement>(null);
   const [experiences, setExperiences] = useState(null);
+  useGsapAnimation(sectionRef, [experiences]);
 
   useEffect(() => {
     fetch("/data/experiences.json")
@@ -28,7 +30,7 @@ const Experience = () => {
   if (!experiences) return null;
 
   return (
-    <section id="experience" className="gray-section py-10 md:py-24 scroll-mt-32">
+    <section ref={sectionRef} id="experience" className="gray-section py-10 md:py-24 scroll-mt-32">
       <div className="container text-center">
         <h2 className="section-title">{experiences.section_title}</h2>
 
@@ -64,7 +66,7 @@ const Experience = () => {
           </Swiper>
         </div>
 
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
+        <div className="gsap-stagger hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px]">
           {experiences.experience_card.map((exp, index) => (
             <div key={index} className="experience-card">
               <div className="flex flex-col items-center gap-4 h-full">

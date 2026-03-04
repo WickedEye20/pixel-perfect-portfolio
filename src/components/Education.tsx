@@ -5,10 +5,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useGsapAnimation } from "@/hooks/useGsapAnimation";
 
 const Education = () => {
+  const sectionRef = useRef<HTMLElement>(null);
   const [education, setEducation] = useState(null);
+  useGsapAnimation(sectionRef, [education]);
 
   useEffect(() => {
     fetch("/data/education.json")
@@ -20,7 +23,7 @@ const Education = () => {
   if (!education) return null;
 
   return (
-    <section id="education" className="gray-section py-10 md:py-28 scroll-mt-32">
+    <section ref={sectionRef} id="education" className="gray-section py-10 md:py-28 scroll-mt-32">
       <div className="container text-center">
         <h2 className="section-title text-foreground">{education.section_title}</h2>
 
@@ -38,7 +41,7 @@ const Education = () => {
                   <div className={`rounded-full mb-8`}>
                     <img className="mx-auto" src={edu.icon} alt={edu.school} />
                   </div>
-                  <h5 className="font-semibold text-foreground text-2xl mb-4 max-w-[270px]">
+                  <h5 className="font-semibold text-foreground text-2xl mb-4 max-w-[270px] mx-auto">
                     {edu.degree}
                     <span className="block font-normal text-muted-foreground text-lg">
                       in
@@ -53,7 +56,7 @@ const Education = () => {
           </Swiper>
         </div>
 
-        <div className="hidden md:grid md:grid-cols-3 gap-10 md:gap-6 justify-items-center">
+        <div className="gsap-stagger hidden md:grid md:grid-cols-3 gap-10 md:gap-6 justify-items-center">
           {education.education_card.map((edu, index) => (
             <div key={index} className="max-w-[350px]">
               <div className={`rounded-full mb-8`}>
